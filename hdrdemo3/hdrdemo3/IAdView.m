@@ -41,12 +41,20 @@
 - (void)setIAdObj:(IAdObj *)obj
 {
     NSString * picsURL = obj.url;
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:picsURL]]];
-    [self.imageView setImage:image];
+    NSURLRequest * req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:picsURL]];
+    NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    [conn start];
+    
+//    return;
+    
+//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:picsURL]]];
+//    [self.imageView setImage:image];
     
     NSString * labelHead = @"  ";
     self.title.text = [labelHead stringByAppendingString:obj.title];
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

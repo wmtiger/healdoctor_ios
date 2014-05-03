@@ -31,6 +31,11 @@
 		A32EEB741914FF0700B4F14C /* HDRManTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */; };
 		A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */; };
 		A32EEB79191526A500B4F14C /* ManList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB78191526A500B4F14C /* ManList.plist */; };
+		A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D7D4D11915A04100114BEF /* WomanList.plist */; };
+		A3D7D4D51915A19800114BEF /* HDRWomanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */; };
+		A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4DE1915A7A900114BEF /* HDRInfoBaseViewController.m */; };
+		A3D7D4E21915A7C400114BEF /* HDRToolBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4E11915A7C400114BEF /* HDRToolBaseViewController.m */; };
+		A3D7D4E51915A80700114BEF /* HDRPedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4E41915A80700114BEF /* HDRPedometerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,15 @@
 		A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRManTableViewController.h; sourceTree = "<group>"; };
 		A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRManTableViewController.m; sourceTree = "<group>"; };
 		A32EEB78191526A500B4F14C /* ManList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManList.plist; sourceTree = "<group>"; };
+		A3D7D4D11915A04100114BEF /* WomanList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WomanList.plist; sourceTree = "<group>"; };
+		A3D7D4D31915A19800114BEF /* HDRWomanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRWomanTableViewController.h; sourceTree = "<group>"; };
+		A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRWomanTableViewController.m; sourceTree = "<group>"; };
+		A3D7D4DD1915A7A900114BEF /* HDRInfoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRInfoBaseViewController.h; sourceTree = "<group>"; };
+		A3D7D4DE1915A7A900114BEF /* HDRInfoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRInfoBaseViewController.m; sourceTree = "<group>"; };
+		A3D7D4E01915A7C400114BEF /* HDRToolBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRToolBaseViewController.h; sourceTree = "<group>"; };
+		A3D7D4E11915A7C400114BEF /* HDRToolBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRToolBaseViewController.m; sourceTree = "<group>"; };
+		A3D7D4E31915A80700114BEF /* HDRPedometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRPedometerViewController.h; sourceTree = "<group>"; };
+		A3D7D4E41915A80700114BEF /* HDRPedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRPedometerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +219,8 @@
 		A32EEB551914BCEA00B4F14C /* man */ = {
 			isa = PBXGroup;
 			children = (
+				A3D7D4DA1915A70D00114BEF /* infos */,
+				A3D7D4D91915A6FB00114BEF /* tools */,
 				A32EEB721914FF0700B4F14C /* HDRManTableViewCell.h */,
 				A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */,
 				A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */,
@@ -216,6 +232,8 @@
 		A32EEB561914BCF100B4F14C /* woman */ = {
 			isa = PBXGroup;
 			children = (
+				A3D7D4D31915A19800114BEF /* HDRWomanTableViewController.h */,
+				A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */,
 			);
 			name = woman;
 			sourceTree = "<group>";
@@ -246,6 +264,8 @@
 		A32EEB601914C53100B4F14C /* comps */ = {
 			isa = PBXGroup;
 			children = (
+				A3D7D4DC1915A78B00114BEF /* toolbase */,
+				A3D7D4DB1915A78200114BEF /* infobase */,
 				A32EEB611914C58100B4F14C /* CycleScrollView.h */,
 				A32EEB621914C58100B4F14C /* CycleScrollView.m */,
 				A32EEB631914C58100B4F14C /* NSTimer+Addition.h */,
@@ -274,8 +294,43 @@
 			children = (
 				A32EEB701914F95100B4F14C /* testiad.png */,
 				A32EEB78191526A500B4F14C /* ManList.plist */,
+				A3D7D4D11915A04100114BEF /* WomanList.plist */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		A3D7D4D91915A6FB00114BEF /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7D4E31915A80700114BEF /* HDRPedometerViewController.h */,
+				A3D7D4E41915A80700114BEF /* HDRPedometerViewController.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		A3D7D4DA1915A70D00114BEF /* infos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = infos;
+			sourceTree = "<group>";
+		};
+		A3D7D4DB1915A78200114BEF /* infobase */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7D4DD1915A7A900114BEF /* HDRInfoBaseViewController.h */,
+				A3D7D4DE1915A7A900114BEF /* HDRInfoBaseViewController.m */,
+			);
+			name = infobase;
+			sourceTree = "<group>";
+		};
+		A3D7D4DC1915A78B00114BEF /* toolbase */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7D4E01915A7C400114BEF /* HDRToolBaseViewController.h */,
+				A3D7D4E11915A7C400114BEF /* HDRToolBaseViewController.m */,
+			);
+			name = toolbase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +415,7 @@
 				A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */,
 				A32EEB79191526A500B4F14C /* ManList.plist in Resources */,
 				A32EEB321914BC5500B4F14C /* Main.storyboard in Resources */,
+				A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +440,11 @@
 				A32EEB2B1914BC5500B4F14C /* main.m in Sources */,
 				A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */,
 				A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */,
+				A3D7D4E51915A80700114BEF /* HDRPedometerViewController.m in Sources */,
+				A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */,
 				A32EEB6B1914EE3400B4F14C /* IAdObj.m in Sources */,
+				A3D7D4E21915A7C400114BEF /* HDRToolBaseViewController.m in Sources */,
+				A3D7D4D51915A19800114BEF /* HDRWomanTableViewController.m in Sources */,
 				A32EEB5F1914BEE300B4F14C /* HDRHomeRootViewCtrl.m in Sources */,
 				A32EEB351914BC5500B4F14C /* HDRViewController.m in Sources */,
 				A32EEB661914C58100B4F14C /* NSTimer+Addition.m in Sources */,
@@ -595,6 +655,7 @@
 				A32EEB4F1914BC5500B4F14C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A32EEB501914BC5500B4F14C /* Build configuration list for PBXNativeTarget "hdrdemo3Tests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +664,7 @@
 				A32EEB521914BC5500B4F14C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

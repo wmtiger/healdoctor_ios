@@ -10,6 +10,6 @@
 
 @interface HDRManTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSMutableArray * manList;
+@property (nonatomic, strong) NSMutableArray * dataList;
 
 @end

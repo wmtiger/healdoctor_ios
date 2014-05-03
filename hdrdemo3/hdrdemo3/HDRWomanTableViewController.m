@@ -1,18 +1,18 @@
 //
-//  HDRManTableViewController.m
+//  HDRWomanTableViewController.m
 //  hdrdemo3
 //
-//  Created by wei sm on 14-5-3.
+//  Created by wei sm on 14-5-4.
 //  Copyright (c) 2014年 bf. All rights reserved.
 //
 
-#import "HDRManTableViewController.h"
+#import "HDRWomanTableViewController.h"
 
-@interface HDRManTableViewController ()
+@interface HDRWomanTableViewController ()
 
 @end
 
-@implementation HDRManTableViewController
+@implementation HDRWomanTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,22 +32,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self initDataList: [self getDataListFilePath]];
-    
 }
 
 - (NSString *)getDataListFilePath
 {
-    return @"ManList.plist";
-}
-
-- (void)initDataList:(NSString *)filePath
-{
-    self.dataList = [@[] mutableCopy];
-    NSString * path = [[NSBundle mainBundle] pathForResource:filePath ofType:nil];
-    self.dataList = [self.dataList initWithContentsOfFile:path];
-    NSLog(@"%@", [[self.dataList objectAtIndex:0] objectForKey:@"title"]);
+    return @"WomanList.plist";
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,54 +50,32 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.dataList count];
+//    return 0;
+    return [super numberOfSectionsInTableView:tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray * arr = [[self.dataList objectAtIndex:section] objectForKey:@"list"];
-    return [arr count];
+//    return 0;
+    return [super tableView:tableView numberOfRowsInSection:section];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSUInteger section = [indexPath section];
-    NSUInteger row = [indexPath row];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    NSArray * arr = [[self.dataList objectAtIndex:section] objectForKey:@"list"];
-    
-    NSString * CELL = [self getCellName];
-    
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CELL forIndexPath:indexPath];
-    
-    cell.textLabel.text = [[arr objectAtIndex:row] objectForKey:@"name"];
     // Configure the cell...
     
-    return cell;
+//    return cell;
+    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (NSString *)getCellName
 {
-    return @"ManCell";
+    return @"WomanCell";
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString * headName = [[self.dataList objectAtIndex:section] objectForKey:@"title"];
-    return headName;
-}
-
-/*
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    NSMutableArray * list = [NSMutableArray arrayWithCapacity:20];
-    for (NSDictionary *dict in self.manList) {
-        [list addObject:[dict objectForKey:@"title"]];
-    }
-    return list;
-}
-*/
 
 /*
 // Override to support conditional editing of the table view.
