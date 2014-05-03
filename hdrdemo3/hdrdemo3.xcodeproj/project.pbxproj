@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A32EEB1F1914BC5500B4F14C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB1E1914BC5500B4F14C /* Foundation.framework */; };
+		A32EEB211914BC5500B4F14C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB201914BC5500B4F14C /* CoreGraphics.framework */; };
+		A32EEB231914BC5500B4F14C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB221914BC5500B4F14C /* UIKit.framework */; };
+		A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB271914BC5500B4F14C /* InfoPlist.strings */; };
+		A32EEB2B1914BC5500B4F14C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB2A1914BC5500B4F14C /* main.m */; };
+		A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB2E1914BC5500B4F14C /* HDRAppDelegate.m */; };
+		A32EEB321914BC5500B4F14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB301914BC5500B4F14C /* Main.storyboard */; };
+		A32EEB351914BC5500B4F14C /* HDRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB341914BC5500B4F14C /* HDRViewController.m */; };
+		A32EEB371914BC5500B4F14C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB361914BC5500B4F14C /* Images.xcassets */; };
+		A32EEB3E1914BC5500B4F14C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB3D1914BC5500B4F14C /* XCTest.framework */; };
+		A32EEB3F1914BC5500B4F14C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB1E1914BC5500B4F14C /* Foundation.framework */; };
+		A32EEB401914BC5500B4F14C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB221914BC5500B4F14C /* UIKit.framework */; };
+		A32EEB481914BC5500B4F14C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB461914BC5500B4F14C /* InfoPlist.strings */; };
+		A32EEB4A1914BC5500B4F14C /* hdrdemo3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB491914BC5500B4F14C /* hdrdemo3Tests.m */; };
+		A32EEB5A1914BD4100B4F14C /* HDRHomeNavCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB591914BD4100B4F14C /* HDRHomeNavCtrl.m */; };
+		A32EEB5F1914BEE300B4F14C /* HDRHomeRootViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB5E1914BEE300B4F14C /* HDRHomeRootViewCtrl.m */; };
+		A32EEB651914C58100B4F14C /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB621914C58100B4F14C /* CycleScrollView.m */; };
+		A32EEB661914C58100B4F14C /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB641914C58100B4F14C /* NSTimer+Addition.m */; };
+		A32EEB6B1914EE3400B4F14C /* IAdObj.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB6A1914EE3400B4F14C /* IAdObj.m */; };
+		A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB6D1914F1EE00B4F14C /* IAdView.m */; };
+		A32EEB711914F95100B4F14C /* testiad.png in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB701914F95100B4F14C /* testiad.png */; };
+		A32EEB741914FF0700B4F14C /* HDRManTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */; };
+		A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */; };
+		A32EEB79191526A500B4F14C /* ManList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB78191526A500B4F14C /* ManList.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A32EEB411914BC5500B4F14C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32EEB131914BC5500B4F14C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A32EEB1A1914BC5500B4F14C;
+			remoteInfo = hdrdemo3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A32EEB1B1914BC5500B4F14C /* hdrdemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hdrdemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32EEB1E1914BC5500B4F14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A32EEB201914BC5500B4F14C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A32EEB221914BC5500B4F14C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A32EEB261914BC5500B4F14C /* hdrdemo3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hdrdemo3-Info.plist"; sourceTree = "<group>"; };
+		A32EEB281914BC5500B4F14C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A32EEB2A1914BC5500B4F14C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A32EEB2C1914BC5500B4F14C /* hdrdemo3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hdrdemo3-Prefix.pch"; sourceTree = "<group>"; };
+		A32EEB2D1914BC5500B4F14C /* HDRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRAppDelegate.h; sourceTree = "<group>"; };
+		A32EEB2E1914BC5500B4F14C /* HDRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRAppDelegate.m; sourceTree = "<group>"; };
+		A32EEB311914BC5500B4F14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A32EEB331914BC5500B4F14C /* HDRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRViewController.h; sourceTree = "<group>"; };
+		A32EEB341914BC5500B4F14C /* HDRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRViewController.m; sourceTree = "<group>"; };
+		A32EEB361914BC5500B4F14C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A32EEB3C1914BC5500B4F14C /* hdrdemo3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hdrdemo3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32EEB3D1914BC5500B4F14C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A32EEB451914BC5500B4F14C /* hdrdemo3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hdrdemo3Tests-Info.plist"; sourceTree = "<group>"; };
+		A32EEB471914BC5500B4F14C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A32EEB491914BC5500B4F14C /* hdrdemo3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hdrdemo3Tests.m; sourceTree = "<group>"; };
+		A32EEB581914BD4100B4F14C /* HDRHomeNavCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeNavCtrl.h; sourceTree = "<group>"; };
+		A32EEB591914BD4100B4F14C /* HDRHomeNavCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeNavCtrl.m; sourceTree = "<group>"; };
+		A32EEB5D1914BEE300B4F14C /* HDRHomeRootViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeRootViewCtrl.h; sourceTree = "<group>"; };
+		A32EEB5E1914BEE300B4F14C /* HDRHomeRootViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeRootViewCtrl.m; sourceTree = "<group>"; };
+		A32EEB611914C58100B4F14C /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
+		A32EEB621914C58100B4F14C /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollView.m; sourceTree = "<group>"; };
+		A32EEB631914C58100B4F14C /* NSTimer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Addition.h"; sourceTree = "<group>"; };
+		A32EEB641914C58100B4F14C /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
+		A32EEB691914EE3400B4F14C /* IAdObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdObj.h; sourceTree = "<group>"; };
+		A32EEB6A1914EE3400B4F14C /* IAdObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAdObj.m; sourceTree = "<group>"; };
+		A32EEB6C1914F1EE00B4F14C /* IAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdView.h; sourceTree = "<group>"; };
+		A32EEB6D1914F1EE00B4F14C /* IAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAdView.m; sourceTree = "<group>"; };
+		A32EEB701914F95100B4F14C /* testiad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testiad.png; sourceTree = "<group>"; };
+		A32EEB721914FF0700B4F14C /* HDRManTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRManTableViewCell.h; sourceTree = "<group>"; };
+		A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRManTableViewCell.m; sourceTree = "<group>"; };
+		A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRManTableViewController.h; sourceTree = "<group>"; };
+		A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRManTableViewController.m; sourceTree = "<group>"; };
+		A32EEB78191526A500B4F14C /* ManList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManList.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A32EEB181914BC5500B4F14C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB211914BC5500B4F14C /* CoreGraphics.framework in Frameworks */,
+				A32EEB231914BC5500B4F14C /* UIKit.framework in Frameworks */,
+				A32EEB1F1914BC5500B4F14C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EEB391914BC5500B4F14C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB3E1914BC5500B4F14C /* XCTest.framework in Frameworks */,
+				A32EEB401914BC5500B4F14C /* UIKit.framework in Frameworks */,
+				A32EEB3F1914BC5500B4F14C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A32EEB121914BC5500B4F14C = {
+			isa = PBXGroup;
+			children = (
+				A32EEB241914BC5500B4F14C /* hdrdemo3 */,
+				A32EEB431914BC5500B4F14C /* hdrdemo3Tests */,
+				A32EEB1D1914BC5500B4F14C /* Frameworks */,
+				A32EEB1C1914BC5500B4F14C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A32EEB1C1914BC5500B4F14C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB1B1914BC5500B4F14C /* hdrdemo3.app */,
+				A32EEB3C1914BC5500B4F14C /* hdrdemo3Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A32EEB1D1914BC5500B4F14C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB1E1914BC5500B4F14C /* Foundation.framework */,
+				A32EEB201914BC5500B4F14C /* CoreGraphics.framework */,
+				A32EEB221914BC5500B4F14C /* UIKit.framework */,
+				A32EEB3D1914BC5500B4F14C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A32EEB241914BC5500B4F14C /* hdrdemo3 */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB6F1914F95100B4F14C /* assets */,
+				A32EEB601914C53100B4F14C /* comps */,
+				A32EEB5C1914BD8200B4F14C /* tools */,
+				A32EEB5B1914BD7B00B4F14C /* more */,
+				A32EEB541914BCE100B4F14C /* near */,
+				A32EEB531914BCD900B4F14C /* home */,
+				A32EEB2D1914BC5500B4F14C /* HDRAppDelegate.h */,
+				A32EEB2E1914BC5500B4F14C /* HDRAppDelegate.m */,
+				A32EEB301914BC5500B4F14C /* Main.storyboard */,
+				A32EEB361914BC5500B4F14C /* Images.xcassets */,
+				A32EEB251914BC5500B4F14C /* Supporting Files */,
+			);
+			path = hdrdemo3;
+			sourceTree = "<group>";
+		};
+		A32EEB251914BC5500B4F14C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB261914BC5500B4F14C /* hdrdemo3-Info.plist */,
+				A32EEB271914BC5500B4F14C /* InfoPlist.strings */,
+				A32EEB2A1914BC5500B4F14C /* main.m */,
+				A32EEB2C1914BC5500B4F14C /* hdrdemo3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A32EEB431914BC5500B4F14C /* hdrdemo3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB491914BC5500B4F14C /* hdrdemo3Tests.m */,
+				A32EEB441914BC5500B4F14C /* Supporting Files */,
+			);
+			path = hdrdemo3Tests;
+			sourceTree = "<group>";
+		};
+		A32EEB441914BC5500B4F14C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB451914BC5500B4F14C /* hdrdemo3Tests-Info.plist */,
+				A32EEB461914BC5500B4F14C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A32EEB531914BCD900B4F14C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB681914EE1300B4F14C /* mainview */,
+				A32EEB571914BCF600B4F14C /* searchhospital */,
+				A32EEB561914BCF100B4F14C /* woman */,
+				A32EEB551914BCEA00B4F14C /* man */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		A32EEB541914BCE100B4F14C /* near */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = near;
+			sourceTree = "<group>";
+		};
+		A32EEB551914BCEA00B4F14C /* man */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB721914FF0700B4F14C /* HDRManTableViewCell.h */,
+				A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */,
+				A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */,
+				A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */,
+			);
+			name = man;
+			sourceTree = "<group>";
+		};
+		A32EEB561914BCF100B4F14C /* woman */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = woman;
+			sourceTree = "<group>";
+		};
+		A32EEB571914BCF600B4F14C /* searchhospital */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = searchhospital;
+			sourceTree = "<group>";
+		};
+		A32EEB5B1914BD7B00B4F14C /* more */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB331914BC5500B4F14C /* HDRViewController.h */,
+				A32EEB341914BC5500B4F14C /* HDRViewController.m */,
+			);
+			name = more;
+			sourceTree = "<group>";
+		};
+		A32EEB5C1914BD8200B4F14C /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		A32EEB601914C53100B4F14C /* comps */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB611914C58100B4F14C /* CycleScrollView.h */,
+				A32EEB621914C58100B4F14C /* CycleScrollView.m */,
+				A32EEB631914C58100B4F14C /* NSTimer+Addition.h */,
+				A32EEB641914C58100B4F14C /* NSTimer+Addition.m */,
+			);
+			name = comps;
+			sourceTree = "<group>";
+		};
+		A32EEB681914EE1300B4F14C /* mainview */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB581914BD4100B4F14C /* HDRHomeNavCtrl.h */,
+				A32EEB591914BD4100B4F14C /* HDRHomeNavCtrl.m */,
+				A32EEB5D1914BEE300B4F14C /* HDRHomeRootViewCtrl.h */,
+				A32EEB5E1914BEE300B4F14C /* HDRHomeRootViewCtrl.m */,
+				A32EEB691914EE3400B4F14C /* IAdObj.h */,
+				A32EEB6A1914EE3400B4F14C /* IAdObj.m */,
+				A32EEB6C1914F1EE00B4F14C /* IAdView.h */,
+				A32EEB6D1914F1EE00B4F14C /* IAdView.m */,
+			);
+			name = mainview;
+			sourceTree = "<group>";
+		};
+		A32EEB6F1914F95100B4F14C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				A32EEB701914F95100B4F14C /* testiad.png */,
+				A32EEB78191526A500B4F14C /* ManList.plist */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A32EEB1A1914BC5500B4F14C /* hdrdemo3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32EEB4D1914BC5500B4F14C /* Build configuration list for PBXNativeTarget "hdrdemo3" */;
+			buildPhases = (
+				A32EEB171914BC5500B4F14C /* Sources */,
+				A32EEB181914BC5500B4F14C /* Frameworks */,
+				A32EEB191914BC5500B4F14C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hdrdemo3;
+			productName = hdrdemo3;
+			productReference = A32EEB1B1914BC5500B4F14C /* hdrdemo3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A32EEB3B1914BC5500B4F14C /* hdrdemo3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32EEB501914BC5500B4F14C /* Build configuration list for PBXNativeTarget "hdrdemo3Tests" */;
+			buildPhases = (
+				A32EEB381914BC5500B4F14C /* Sources */,
+				A32EEB391914BC5500B4F14C /* Frameworks */,
+				A32EEB3A1914BC5500B4F14C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A32EEB421914BC5500B4F14C /* PBXTargetDependency */,
+			);
+			name = hdrdemo3Tests;
+			productName = hdrdemo3Tests;
+			productReference = A32EEB3C1914BC5500B4F14C /* hdrdemo3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A32EEB131914BC5500B4F14C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HDR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = bf;
+				TargetAttributes = {
+					A32EEB3B1914BC5500B4F14C = {
+						TestTargetID = A32EEB1A1914BC5500B4F14C;
+					};
+				};
+			};
+			buildConfigurationList = A32EEB161914BC5500B4F14C /* Build configuration list for PBXProject "hdrdemo3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A32EEB121914BC5500B4F14C;
+			productRefGroup = A32EEB1C1914BC5500B4F14C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A32EEB1A1914BC5500B4F14C /* hdrdemo3 */,
+				A32EEB3B1914BC5500B4F14C /* hdrdemo3Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A32EEB191914BC5500B4F14C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB711914F95100B4F14C /* testiad.png in Resources */,
+				A32EEB371914BC5500B4F14C /* Images.xcassets in Resources */,
+				A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */,
+				A32EEB79191526A500B4F14C /* ManList.plist in Resources */,
+				A32EEB321914BC5500B4F14C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EEB3A1914BC5500B4F14C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB481914BC5500B4F14C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A32EEB171914BC5500B4F14C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */,
+				A32EEB651914C58100B4F14C /* CycleScrollView.m in Sources */,
+				A32EEB5A1914BD4100B4F14C /* HDRHomeNavCtrl.m in Sources */,
+				A32EEB2B1914BC5500B4F14C /* main.m in Sources */,
+				A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */,
+				A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */,
+				A32EEB6B1914EE3400B4F14C /* IAdObj.m in Sources */,
+				A32EEB5F1914BEE300B4F14C /* HDRHomeRootViewCtrl.m in Sources */,
+				A32EEB351914BC5500B4F14C /* HDRViewController.m in Sources */,
+				A32EEB661914C58100B4F14C /* NSTimer+Addition.m in Sources */,
+				A32EEB741914FF0700B4F14C /* HDRManTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EEB381914BC5500B4F14C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EEB4A1914BC5500B4F14C /* hdrdemo3Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A32EEB421914BC5500B4F14C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A32EEB1A1914BC5500B4F14C /* hdrdemo3 */;
+			targetProxy = A32EEB411914BC5500B4F14C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A32EEB271914BC5500B4F14C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32EEB281914BC5500B4F14C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A32EEB301914BC5500B4F14C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32EEB311914BC5500B4F14C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A32EEB461914BC5500B4F14C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32EEB471914BC5500B4F14C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A32EEB4B1914BC5500B4F14C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A32EEB4C1914BC5500B4F14C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A32EEB4E1914BC5500B4F14C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo3/hdrdemo3-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo3/hdrdemo3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A32EEB4F1914BC5500B4F14C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo3/hdrdemo3-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo3/hdrdemo3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A32EEB511914BC5500B4F14C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hdrdemo3.app/hdrdemo3";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo3/hdrdemo3-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hdrdemo3Tests/hdrdemo3Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A32EEB521914BC5500B4F14C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hdrdemo3.app/hdrdemo3";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo3/hdrdemo3-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo3Tests/hdrdemo3Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A32EEB161914BC5500B4F14C /* Build configuration list for PBXProject "hdrdemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EEB4B1914BC5500B4F14C /* Debug */,
+				A32EEB4C1914BC5500B4F14C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A32EEB4D1914BC5500B4F14C /* Build configuration list for PBXNativeTarget "hdrdemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EEB4E1914BC5500B4F14C /* Debug */,
+				A32EEB4F1914BC5500B4F14C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A32EEB501914BC5500B4F14C /* Build configuration list for PBXNativeTarget "hdrdemo3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EEB511914BC5500B4F14C /* Debug */,
+				A32EEB521914BC5500B4F14C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A32EEB131914BC5500B4F14C /* Project object */;
+}
