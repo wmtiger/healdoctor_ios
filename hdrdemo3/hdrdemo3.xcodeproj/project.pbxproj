@@ -31,6 +31,10 @@
 		A32EEB741914FF0700B4F14C /* HDRManTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */; };
 		A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */; };
 		A32EEB79191526A500B4F14C /* ManList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB78191526A500B4F14C /* ManList.plist */; };
+		A3D15343191847E400E328D0 /* HDRHospitalTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */; };
+		A3D153471918491300E328D0 /* HDRSearchBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */; };
+		A3D1534919184DFF00E328D0 /* Disease.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D1534819184DFF00E328D0 /* Disease.plist */; };
+		A3D15354191855F500E328D0 /* HDRChineseConvertPy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */; };
 		A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D7D4D11915A04100114BEF /* WomanList.plist */; };
 		A3D7D4D51915A19800114BEF /* HDRWomanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */; };
 		A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4DE1915A7A900114BEF /* HDRInfoBaseViewController.m */; };
@@ -86,6 +90,16 @@
 		A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRManTableViewController.h; sourceTree = "<group>"; };
 		A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRManTableViewController.m; sourceTree = "<group>"; };
 		A32EEB78191526A500B4F14C /* ManList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManList.plist; sourceTree = "<group>"; };
+		A3D15341191847E400E328D0 /* HDRHospitalTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalTableViewCtrl.h; sourceTree = "<group>"; };
+		A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalTableViewCtrl.m; sourceTree = "<group>"; };
+		A3D153451918491300E328D0 /* HDRSearchBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRSearchBarTableViewController.h; sourceTree = "<group>"; };
+		A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRSearchBarTableViewController.m; sourceTree = "<group>"; };
+		A3D1534819184DFF00E328D0 /* Disease.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Disease.plist; sourceTree = "<group>"; };
+		A3D1534F1918533800E328D0 /* glib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glib.h; sourceTree = "<group>"; };
+		A3D15352191855F500E328D0 /* HDRChineseConvertPy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRChineseConvertPy.h; sourceTree = "<group>"; };
+		A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRChineseConvertPy.m; sourceTree = "<group>"; };
+		A3D153551918577300E328D0 /* eglib-config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eglib-config.h"; sourceTree = "<group>"; };
+		A3D15356191857AE00E328D0 /* eglib-remap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eglib-remap.h"; sourceTree = "<group>"; };
 		A3D7D4D11915A04100114BEF /* WomanList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WomanList.plist; sourceTree = "<group>"; };
 		A3D7D4D31915A19800114BEF /* HDRWomanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRWomanTableViewController.h; sourceTree = "<group>"; };
 		A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRWomanTableViewController.m; sourceTree = "<group>"; };
@@ -154,6 +168,7 @@
 		A32EEB241914BC5500B4F14C /* hdrdemo3 */ = {
 			isa = PBXGroup;
 			children = (
+				A3D1534A1918516A00E328D0 /* utils */,
 				A32EEB6F1914F95100B4F14C /* assets */,
 				A32EEB601914C53100B4F14C /* comps */,
 				A32EEB5C1914BD8200B4F14C /* tools */,
@@ -241,6 +256,8 @@
 		A32EEB571914BCF600B4F14C /* searchhospital */ = {
 			isa = PBXGroup;
 			children = (
+				A3D15341191847E400E328D0 /* HDRHospitalTableViewCtrl.h */,
+				A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */,
 			);
 			name = searchhospital;
 			sourceTree = "<group>";
@@ -264,6 +281,7 @@
 		A32EEB601914C53100B4F14C /* comps */ = {
 			isa = PBXGroup;
 			children = (
+				A3D15344191848A500E328D0 /* searchbartable */,
 				A3D7D4DC1915A78B00114BEF /* toolbase */,
 				A3D7D4DB1915A78200114BEF /* infobase */,
 				A32EEB611914C58100B4F14C /* CycleScrollView.h */,
@@ -295,8 +313,30 @@
 				A32EEB701914F95100B4F14C /* testiad.png */,
 				A32EEB78191526A500B4F14C /* ManList.plist */,
 				A3D7D4D11915A04100114BEF /* WomanList.plist */,
+				A3D1534819184DFF00E328D0 /* Disease.plist */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		A3D15344191848A500E328D0 /* searchbartable */ = {
+			isa = PBXGroup;
+			children = (
+				A3D153451918491300E328D0 /* HDRSearchBarTableViewController.h */,
+				A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */,
+			);
+			name = searchbartable;
+			sourceTree = "<group>";
+		};
+		A3D1534A1918516A00E328D0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3D1534F1918533800E328D0 /* glib.h */,
+				A3D15352191855F500E328D0 /* HDRChineseConvertPy.h */,
+				A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */,
+				A3D153551918577300E328D0 /* eglib-config.h */,
+				A3D15356191857AE00E328D0 /* eglib-remap.h */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 		A3D7D4D91915A6FB00114BEF /* tools */ = {
@@ -410,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D1534919184DFF00E328D0 /* Disease.plist in Resources */,
 				A32EEB711914F95100B4F14C /* testiad.png in Resources */,
 				A32EEB371914BC5500B4F14C /* Images.xcassets in Resources */,
 				A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */,
@@ -437,8 +478,11 @@
 				A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */,
 				A32EEB651914C58100B4F14C /* CycleScrollView.m in Sources */,
 				A32EEB5A1914BD4100B4F14C /* HDRHomeNavCtrl.m in Sources */,
+				A3D15354191855F500E328D0 /* HDRChineseConvertPy.m in Sources */,
+				A3D153471918491300E328D0 /* HDRSearchBarTableViewController.m in Sources */,
 				A32EEB2B1914BC5500B4F14C /* main.m in Sources */,
 				A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */,
+				A3D15343191847E400E328D0 /* HDRHospitalTableViewCtrl.m in Sources */,
 				A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */,
 				A3D7D4E51915A80700114BEF /* HDRPedometerViewController.m in Sources */,
 				A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */,

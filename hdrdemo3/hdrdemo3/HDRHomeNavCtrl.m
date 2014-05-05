@@ -7,6 +7,7 @@
 //
 
 #import "HDRHomeNavCtrl.h"
+#import "HDRChineseConvertPy.h"
 
 @interface HDRHomeNavCtrl ()
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *w = [HDRChineseConvertPy chineseCharConvertToPy:@"我"];
+    NSLog(@"%@", w);
 }
 
 - (void)didReceiveMemoryWarning

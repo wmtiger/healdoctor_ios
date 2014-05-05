@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "IAdObj.h"
 
-@interface IAdView : UIView
+@interface IAdView : UIView <NSURLConnectionDataDelegate>
 
 @property (nonatomic, strong) UIImageView * imageView;
 @property (nonatomic, strong) UILabel * title;
+
+@property (nonatomic, strong) NSMutableData * returnData;
+@property (nonatomic, strong) NSURLConnection * conn;
+@property (nonatomic, strong) NSHTTPURLResponse * response;
 
 - (void)setIAdObj:(IAdObj *)obj;
 

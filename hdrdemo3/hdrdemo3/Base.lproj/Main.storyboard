@@ -113,6 +113,30 @@
                                     <segue destination="bF8-XB-Bte" kind="push" id="j7x-16-k9V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-VP-QAo">
+                                <rect key="frame" x="37" y="394" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="寻医">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WnL-iP-LHp" kind="push" id="UXI-bC-7Tf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-nl-sku">
+                                <rect key="frame" x="137" y="394" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="问药">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO4-jC-xxB">
+                                <rect key="frame" x="237" y="394" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="自检">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -150,6 +174,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6QA-TT-n7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="-1356"/>
+        </scene>
+        <!--Hospital Table View Ctrl-->
+        <scene sceneID="Hv4-ii-k0Q">
+            <objects>
+                <viewController id="WnL-iP-LHp" customClass="HDRHospitalTableViewCtrl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rfr-0q-rz9"/>
+                        <viewControllerLayoutGuide type="bottom" id="3W3-Qy-X6X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ev2-bH-F9m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BII-QA-ylH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMa-GK-Lq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="-614"/>
         </scene>
         <!--Home Nav Ctrl - 首页-->
         <scene sceneID="gpS-JR-2ZS">

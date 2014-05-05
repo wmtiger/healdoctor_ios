@@ -24,11 +24,9 @@
 - (void)initAdView
 {
     NSLog(@"initadview");
-//    NSString * picsURL = @"http://ww1.sinaimg.cn/large/53e0c4edjw1dy3qf6n17xj.jpg";
     NSString * picsURL = @"testiad.png";
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:picsURL]]];
     UIImage *image = [UIImage imageNamed:picsURL];
     [self.imageView setImage:image];
     [self addSubview:self.imageView];
@@ -40,21 +38,45 @@
 
 - (void)setIAdObj:(IAdObj *)obj
 {
-    NSString * picsURL = obj.url;
-    NSURLRequest * req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:picsURL]];
-    NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-    [conn start];
+    NSString * picsURL = [obj.url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:picsURL]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval:60];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPMethod:@"GET"];
     
-//    return;
-    
-//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:picsURL]]];
-//    [self.imageView setImage:image];
+    self.conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [self.conn start];
     
     NSString * labelHead = @"  ";
     self.title.text = [labelHead stringByAppendingString:obj.title];
 }
 
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"%@", error);
+}
 
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.returnData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"ok");
+    self.returnData = [[NSMutableData alloc]init];
+    self.response = (NSHTTPURLResponse *)response;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    if (self.response.statusCode == 200) {
+        UIImage * image = [UIImage imageWithData:self.returnData];
+        [self.imageView setImage:image];
+    }
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
