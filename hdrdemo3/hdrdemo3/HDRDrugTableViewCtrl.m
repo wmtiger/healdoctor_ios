@@ -1,43 +1,42 @@
 //
-//  FKRSearchBarTableViewController.m
-//  TableViewSearchBar
+//  HDRDrugTableViewCtrl.m
+//  hdrdemo3
 //
-//  Created by Fabian Kreiser on 10.02.13.
-//  Copyright (c) 2013 Fabian Kreiser. All rights reserved.
+//  Created by wei sm on 14-5-7.
+//  Copyright (c) 2014年 bf. All rights reserved.
 //
 
-#import "HDRSearchBarTableViewController.h"
+#import "HDRDrugTableViewCtrl.h"
 
-static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdentifier = @"HDRSearchBarTableViewControllerDefaultTableViewCellIdentifier";
-
-@interface HDRSearchBarTableViewController () {
+@interface HDRDrugTableViewCtrl ()
+{
     
 }
 
-@property(nonatomic, copy) NSArray *famousPersons;
-@property(nonatomic, copy) NSArray *filteredPersons;
+@property(nonatomic, copy) NSArray *diseaseList;
+@property(nonatomic, copy) NSArray *filteredDisease;
 @property(nonatomic, copy) NSArray *sections;
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
 @property(nonatomic, strong, readwrite) UISearchBar *searchBar;
 
-@property(nonatomic, strong) UISearchDisplayController *strongSearchDisplayController; // UIViewController doesn't retain the search display controller if it's created programmatically: http://openradar.appspot.com/10254897
-
+@property(nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
 @end
 
-@implementation HDRSearchBarTableViewController
-
-#pragma mark - Initializer
+@implementation HDRDrugTableViewCtrl
 
 - (id)initWithSectionIndexes:(BOOL)showSectionIndexes
 {
+    NSLog(@"initWithSectionIndexes");
+    
     if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"Search Bar";
         
-        _showSectionIndexes = showSectionIndexes;
+        self.showSectionIndexes = showSectionIndexes;
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Top100FamousPersons" ofType:@"plist"];
-        _famousPersons = [[NSArray alloc] initWithContentsOfFile:path];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Disease" ofType:@"plist"];
+        _diseaseList = [[NSArray alloc] initWithContentsOfFile:path];
+        NSLog(@"%@", [self.diseaseList objectAtIndex:0]);
         
         if (showSectionIndexes) {
             UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
@@ -47,9 +46,9 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
                 [unsortedSections addObject:[NSMutableArray array]];
             }
             
-            for (NSString *personName in self.famousPersons) {
-                NSInteger index = [collation sectionForObject:personName collationStringSelector:@selector(description)];
-                [[unsortedSections objectAtIndex:index] addObject:personName];
+            for (NSString *diseaseName in self.diseaseList) {
+                NSInteger index = [collation sectionForObject:diseaseName collationStringSelector:@selector(description)];
+                [[unsortedSections objectAtIndex:index] addObject:diseaseName];
             }
             
             NSMutableArray *sortedSections = [[NSMutableArray alloc] initWithCapacity:unsortedSections.count];
@@ -62,12 +61,23 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
     }
     
     return self;
+
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // Do any additional setup after loading the view.
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -75,7 +85,7 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
     [self.view addSubview:self.tableView];
     
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
-    self.searchBar.placeholder = @"Search";
+    self.searchBar.placeholder = @"输入疾病或症状拼音首字母";
     self.searchBar.delegate = self;
     
     [self.searchBar sizeToFit];
@@ -84,6 +94,12 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
     self.searchDisplayController.searchResultsDataSource = self;
     self.searchDisplayController.searchResultsDelegate = self;
     self.searchDisplayController.delegate = self;
+    
+    self.tableView.tableHeaderView = self.searchBar;
+    
+    // The search bar is hidden when the view becomes visible the first time
+    self.tableView.contentOffset = CGPointMake(0, CGRectGetHeight(self.searchBar.bounds));
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -97,7 +113,14 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
 
 - (void)scrollTableViewToSearchBarAnimated:(BOOL)animated
 {
-    NSAssert(YES, @"This method should be handled by a subclass!");
+    [self.tableView scrollRectToVisible:self.searchBar.frame animated:animated];
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - TableView Delegate and DataSource
@@ -153,31 +176,36 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
         if (self.showSectionIndexes) {
             return [[self.sections objectAtIndex:section] count];
         } else {
-            return self.famousPersons.count;
+            return self.diseaseList.count;
         }
     } else {
-        return self.filteredPersons.count;
+        return self.filteredDisease.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HDRSearchBarTableViewControllerDefaultTableViewCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getCellName]];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HDRSearchBarTableViewControllerDefaultTableViewCellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[self getCellName]];
     }
     
     if (tableView == self.tableView) {
         if (self.showSectionIndexes) {
             cell.textLabel.text = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
         } else {
-            cell.textLabel.text = [self.famousPersons objectAtIndex:indexPath.row];
+            cell.textLabel.text = [self.diseaseList objectAtIndex:indexPath.row];
         }
     } else {
-        cell.textLabel.text = [self.filteredPersons objectAtIndex:indexPath.row];
+        cell.textLabel.text = [self.filteredDisease objectAtIndex:indexPath.row];
     }
     
     return cell;
+}
+
+- (NSString *)getCellName
+{
+    return @"DurgCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -189,19 +217,30 @@ static NSString * const HDRSearchBarTableViewControllerDefaultTableViewCellIdent
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
-    self.filteredPersons = self.famousPersons;
+    self.filteredDisease = self.diseaseList;
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
 {
-    self.filteredPersons = nil;
+    self.filteredDisease = nil;
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    self.filteredPersons = [self.filteredPersons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchString]];
+    self.filteredDisease = [self.filteredDisease filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchString]];
     
     return YES;
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

@@ -12,5 +12,9 @@
 @interface HDRHomeRootViewCtrl : UIViewController
 
 @property (nonatomic, retain) CycleScrollView *cycleScrollView;
+- (IBAction)clickSearchDrug:(id)sender;
+- (IBAction)clickSearchHospital:(id)sender;
+- (IBAction)clickMedicalCare:(id)sender;
+
 
 @end

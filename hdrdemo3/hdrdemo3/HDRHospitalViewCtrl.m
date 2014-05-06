@@ -1,18 +1,18 @@
 //
-//  HDRHomeNavCtrl.m
+//  HDRHospitalViewCtrl.m
 //  hdrdemo3
 //
-//  Created by wei sm on 14-5-3.
+//  Created by wei sm on 14-5-7.
 //  Copyright (c) 2014年 bf. All rights reserved.
 //
 
-#import "HDRHomeNavCtrl.h"
+#import "HDRHospitalViewCtrl.h"
 
-@interface HDRHomeNavCtrl ()
+@interface HDRHospitalViewCtrl ()
 
 @end
 
-@implementation HDRHomeNavCtrl
+@implementation HDRHospitalViewCtrl
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -99,6 +99,11 @@
     return headName;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"click %d,%d", indexPath.section, indexPath.row);
+}
+
 /*
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {

@@ -31,10 +31,15 @@
 		A32EEB741914FF0700B4F14C /* HDRManTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB731914FF0700B4F14C /* HDRManTableViewCell.m */; };
 		A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */; };
 		A32EEB79191526A500B4F14C /* ManList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32EEB78191526A500B4F14C /* ManList.plist */; };
-		A3D15343191847E400E328D0 /* HDRHospitalTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */; };
-		A3D153471918491300E328D0 /* HDRSearchBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */; };
+		A3BA868C1919108500480E32 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BA86801919108500480E32 /* ChineseToPinyinResource.m */; };
+		A3BA868D1919108500480E32 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BA86821919108500480E32 /* HanyuPinyinOutputFormat.m */; };
+		A3BA868E1919108500480E32 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BA86841919108500480E32 /* NSString+PinYin4Cocoa.m */; };
+		A3BA868F1919108500480E32 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BA86871919108500480E32 /* PinyinFormatter.m */; };
+		A3BA86901919108500480E32 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BA86891919108500480E32 /* PinyinHelper.m */; };
+		A3BA86911919108500480E32 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3BA868B1919108500480E32 /* unicode_to_hanyu_pinyin.txt */; };
+		A3BEEE9F19199DC600EE78F2 /* HDRDrugTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BEEE9E19199DC600EE78F2 /* HDRDrugTableViewCtrl.m */; };
+		A3BEEEA21919A7E700EE78F2 /* HDRHospitalViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BEEEA11919A7E700EE78F2 /* HDRHospitalViewCtrl.m */; };
 		A3D1534919184DFF00E328D0 /* Disease.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D1534819184DFF00E328D0 /* Disease.plist */; };
-		A3D15354191855F500E328D0 /* HDRChineseConvertPy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */; };
 		A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D7D4D11915A04100114BEF /* WomanList.plist */; };
 		A3D7D4D51915A19800114BEF /* HDRWomanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */; };
 		A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7D4DE1915A7A900114BEF /* HDRInfoBaseViewController.m */; };
@@ -90,16 +95,23 @@
 		A32EEB751914FF2900B4F14C /* HDRManTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRManTableViewController.h; sourceTree = "<group>"; };
 		A32EEB761914FF2900B4F14C /* HDRManTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRManTableViewController.m; sourceTree = "<group>"; };
 		A32EEB78191526A500B4F14C /* ManList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManList.plist; sourceTree = "<group>"; };
-		A3D15341191847E400E328D0 /* HDRHospitalTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalTableViewCtrl.h; sourceTree = "<group>"; };
-		A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalTableViewCtrl.m; sourceTree = "<group>"; };
-		A3D153451918491300E328D0 /* HDRSearchBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRSearchBarTableViewController.h; sourceTree = "<group>"; };
-		A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRSearchBarTableViewController.m; sourceTree = "<group>"; };
+		A3BA867F1919108500480E32 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		A3BA86801919108500480E32 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		A3BA86811919108500480E32 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		A3BA86821919108500480E32 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		A3BA86831919108500480E32 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		A3BA86841919108500480E32 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		A3BA86851919108500480E32 /* PinYin4Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+		A3BA86861919108500480E32 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		A3BA86871919108500480E32 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		A3BA86881919108500480E32 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		A3BA86891919108500480E32 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		A3BA868B1919108500480E32 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		A3BEEE9D19199DC600EE78F2 /* HDRDrugTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRDrugTableViewCtrl.h; sourceTree = "<group>"; };
+		A3BEEE9E19199DC600EE78F2 /* HDRDrugTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRDrugTableViewCtrl.m; sourceTree = "<group>"; };
+		A3BEEEA01919A7E700EE78F2 /* HDRHospitalViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalViewCtrl.h; sourceTree = "<group>"; };
+		A3BEEEA11919A7E700EE78F2 /* HDRHospitalViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalViewCtrl.m; sourceTree = "<group>"; };
 		A3D1534819184DFF00E328D0 /* Disease.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Disease.plist; sourceTree = "<group>"; };
-		A3D1534F1918533800E328D0 /* glib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glib.h; sourceTree = "<group>"; };
-		A3D15352191855F500E328D0 /* HDRChineseConvertPy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRChineseConvertPy.h; sourceTree = "<group>"; };
-		A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRChineseConvertPy.m; sourceTree = "<group>"; };
-		A3D153551918577300E328D0 /* eglib-config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eglib-config.h"; sourceTree = "<group>"; };
-		A3D15356191857AE00E328D0 /* eglib-remap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eglib-remap.h"; sourceTree = "<group>"; };
 		A3D7D4D11915A04100114BEF /* WomanList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WomanList.plist; sourceTree = "<group>"; };
 		A3D7D4D31915A19800114BEF /* HDRWomanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRWomanTableViewController.h; sourceTree = "<group>"; };
 		A3D7D4D41915A19800114BEF /* HDRWomanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRWomanTableViewController.m; sourceTree = "<group>"; };
@@ -138,6 +150,7 @@
 		A32EEB121914BC5500B4F14C = {
 			isa = PBXGroup;
 			children = (
+				A3BA867D1919108500480E32 /* PinYin4Objc */,
 				A32EEB241914BC5500B4F14C /* hdrdemo3 */,
 				A32EEB431914BC5500B4F14C /* hdrdemo3Tests */,
 				A32EEB1D1914BC5500B4F14C /* Frameworks */,
@@ -168,7 +181,6 @@
 		A32EEB241914BC5500B4F14C /* hdrdemo3 */ = {
 			isa = PBXGroup;
 			children = (
-				A3D1534A1918516A00E328D0 /* utils */,
 				A32EEB6F1914F95100B4F14C /* assets */,
 				A32EEB601914C53100B4F14C /* comps */,
 				A32EEB5C1914BD8200B4F14C /* tools */,
@@ -216,6 +228,7 @@
 		A32EEB531914BCD900B4F14C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEEE9C19199D6200EE78F2 /* searchdrag */,
 				A32EEB681914EE1300B4F14C /* mainview */,
 				A32EEB571914BCF600B4F14C /* searchhospital */,
 				A32EEB561914BCF100B4F14C /* woman */,
@@ -256,8 +269,8 @@
 		A32EEB571914BCF600B4F14C /* searchhospital */ = {
 			isa = PBXGroup;
 			children = (
-				A3D15341191847E400E328D0 /* HDRHospitalTableViewCtrl.h */,
-				A3D15342191847E400E328D0 /* HDRHospitalTableViewCtrl.m */,
+				A3BEEEA01919A7E700EE78F2 /* HDRHospitalViewCtrl.h */,
+				A3BEEEA11919A7E700EE78F2 /* HDRHospitalViewCtrl.m */,
 			);
 			name = searchhospital;
 			sourceTree = "<group>";
@@ -281,7 +294,6 @@
 		A32EEB601914C53100B4F14C /* comps */ = {
 			isa = PBXGroup;
 			children = (
-				A3D15344191848A500E328D0 /* searchbartable */,
 				A3D7D4DC1915A78B00114BEF /* toolbase */,
 				A3D7D4DB1915A78200114BEF /* infobase */,
 				A32EEB611914C58100B4F14C /* CycleScrollView.h */,
@@ -318,25 +330,49 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
-		A3D15344191848A500E328D0 /* searchbartable */ = {
+		A3BA867D1919108500480E32 /* PinYin4Objc */ = {
 			isa = PBXGroup;
 			children = (
-				A3D153451918491300E328D0 /* HDRSearchBarTableViewController.h */,
-				A3D153461918491300E328D0 /* HDRSearchBarTableViewController.m */,
+				A3BA867E1919108500480E32 /* Classes */,
+				A3BA868A1919108500480E32 /* Resources */,
 			);
-			name = searchbartable;
+			name = PinYin4Objc;
+			path = hdrdemo3/PinYin4Objc;
 			sourceTree = "<group>";
 		};
-		A3D1534A1918516A00E328D0 /* utils */ = {
+		A3BA867E1919108500480E32 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A3D1534F1918533800E328D0 /* glib.h */,
-				A3D15352191855F500E328D0 /* HDRChineseConvertPy.h */,
-				A3D15353191855F500E328D0 /* HDRChineseConvertPy.m */,
-				A3D153551918577300E328D0 /* eglib-config.h */,
-				A3D15356191857AE00E328D0 /* eglib-remap.h */,
+				A3BA867F1919108500480E32 /* ChineseToPinyinResource.h */,
+				A3BA86801919108500480E32 /* ChineseToPinyinResource.m */,
+				A3BA86811919108500480E32 /* HanyuPinyinOutputFormat.h */,
+				A3BA86821919108500480E32 /* HanyuPinyinOutputFormat.m */,
+				A3BA86831919108500480E32 /* NSString+PinYin4Cocoa.h */,
+				A3BA86841919108500480E32 /* NSString+PinYin4Cocoa.m */,
+				A3BA86851919108500480E32 /* PinYin4Objc.h */,
+				A3BA86861919108500480E32 /* PinyinFormatter.h */,
+				A3BA86871919108500480E32 /* PinyinFormatter.m */,
+				A3BA86881919108500480E32 /* PinyinHelper.h */,
+				A3BA86891919108500480E32 /* PinyinHelper.m */,
 			);
-			name = utils;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A3BA868A1919108500480E32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3BA868B1919108500480E32 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A3BEEE9C19199D6200EE78F2 /* searchdrag */ = {
+			isa = PBXGroup;
+			children = (
+				A3BEEE9D19199DC600EE78F2 /* HDRDrugTableViewCtrl.h */,
+				A3BEEE9E19199DC600EE78F2 /* HDRDrugTableViewCtrl.m */,
+			);
+			name = searchdrag;
 			sourceTree = "<group>";
 		};
 		A3D7D4D91915A6FB00114BEF /* tools */ = {
@@ -454,6 +490,7 @@
 				A32EEB711914F95100B4F14C /* testiad.png in Resources */,
 				A32EEB371914BC5500B4F14C /* Images.xcassets in Resources */,
 				A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */,
+				A3BA86911919108500480E32 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				A32EEB79191526A500B4F14C /* ManList.plist in Resources */,
 				A32EEB321914BC5500B4F14C /* Main.storyboard in Resources */,
 				A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */,
@@ -475,19 +512,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3BA86901919108500480E32 /* PinyinHelper.m in Sources */,
 				A32EEB771914FF2900B4F14C /* HDRManTableViewController.m in Sources */,
+				A3BA868E1919108500480E32 /* NSString+PinYin4Cocoa.m in Sources */,
 				A32EEB651914C58100B4F14C /* CycleScrollView.m in Sources */,
+				A3BA868D1919108500480E32 /* HanyuPinyinOutputFormat.m in Sources */,
+				A3BA868F1919108500480E32 /* PinyinFormatter.m in Sources */,
 				A32EEB5A1914BD4100B4F14C /* HDRHomeNavCtrl.m in Sources */,
-				A3D15354191855F500E328D0 /* HDRChineseConvertPy.m in Sources */,
-				A3D153471918491300E328D0 /* HDRSearchBarTableViewController.m in Sources */,
 				A32EEB2B1914BC5500B4F14C /* main.m in Sources */,
 				A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */,
-				A3D15343191847E400E328D0 /* HDRHospitalTableViewCtrl.m in Sources */,
 				A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */,
 				A3D7D4E51915A80700114BEF /* HDRPedometerViewController.m in Sources */,
 				A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */,
 				A32EEB6B1914EE3400B4F14C /* IAdObj.m in Sources */,
+				A3BA868C1919108500480E32 /* ChineseToPinyinResource.m in Sources */,
+				A3BEEEA21919A7E700EE78F2 /* HDRHospitalViewCtrl.m in Sources */,
 				A3D7D4E21915A7C400114BEF /* HDRToolBaseViewController.m in Sources */,
+				A3BEEE9F19199DC600EE78F2 /* HDRDrugTableViewCtrl.m in Sources */,
 				A3D7D4D51915A19800114BEF /* HDRWomanTableViewController.m in Sources */,
 				A32EEB5F1914BEE300B4F14C /* HDRHomeRootViewCtrl.m in Sources */,
 				A32EEB351914BC5500B4F14C /* HDRViewController.m in Sources */,

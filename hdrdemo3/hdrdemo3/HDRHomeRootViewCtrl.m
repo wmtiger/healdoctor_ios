@@ -9,6 +9,7 @@
 #import "HDRHomeRootViewCtrl.h"
 #import "IAdObj.h"
 #import "IAdView.h"
+#import "HDRDrugTableViewCtrl.h"
 
 @interface HDRHomeRootViewCtrl ()
 
@@ -109,5 +110,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)clickSearchDrug:(id)sender
+{
+    UIViewController *viewController = [[HDRDrugTableViewCtrl alloc]initWithSectionIndexes:YES];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)clickSearchHospital:(id)sender
+{
+    
+}
+
+- (IBAction)clickMedicalCare:(id)sender
+{
+    
+}
 
 @end

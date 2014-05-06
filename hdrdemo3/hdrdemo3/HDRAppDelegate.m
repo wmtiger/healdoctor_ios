@@ -7,6 +7,8 @@
 //
 
 #import "HDRAppDelegate.h"
+#import "PinyinHelper.h"
+#import "HanyuPinyinOutputFormat.h"
 
 @implementation HDRAppDelegate
 
@@ -25,6 +27,14 @@
         //added on 19th Sep
         self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
     }
+    
+    HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
+    [outputFormat setToneType:ToneTypeWithoutTone];
+    [outputFormat setVCharType:VCharTypeWithV];
+    [outputFormat setCaseType:CaseTypeUppercase];
+    unichar _char = [@"我" characterAtIndex:0];
+    NSString *str = [PinyinHelper getFirstHanyuPinyinStringWithChar:_char withHanyuPinyinOutputFormat:outputFormat];
+    NSLog(@"%c", [str characterAtIndex:0]);
     
     return YES;
 }
