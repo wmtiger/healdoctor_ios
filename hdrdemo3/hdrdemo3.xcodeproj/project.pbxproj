@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E5D08191DC2F100928AAC /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 184E5D04191DC2F100928AAC /* home.png */; };
+		184E5D09191DC2F100928AAC /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 184E5D05191DC2F100928AAC /* more.png */; };
+		184E5D0A191DC2F100928AAC /* near.png in Resources */ = {isa = PBXBuildFile; fileRef = 184E5D06191DC2F100928AAC /* near.png */; };
+		184E5D0B191DC2F100928AAC /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 184E5D07191DC2F100928AAC /* user.png */; };
+		184E5D0D191DC37A00928AAC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E5D0C191DC37A00928AAC /* MapKit.framework */; };
+		184E5D0F191DC38700928AAC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E5D0E191DC38700928AAC /* CoreLocation.framework */; };
+		184E5D12191DC3B600928AAC /* HDRNearViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E5D11191DC3B600928AAC /* HDRNearViewCtrl.m */; };
 		A32EEB1F1914BC5500B4F14C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB1E1914BC5500B4F14C /* Foundation.framework */; };
 		A32EEB211914BC5500B4F14C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB201914BC5500B4F14C /* CoreGraphics.framework */; };
 		A32EEB231914BC5500B4F14C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32EEB221914BC5500B4F14C /* UIKit.framework */; };
@@ -58,6 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184E5D04191DC2F100928AAC /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		184E5D05191DC2F100928AAC /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		184E5D06191DC2F100928AAC /* near.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = near.png; sourceTree = "<group>"; };
+		184E5D07191DC2F100928AAC /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		184E5D0C191DC37A00928AAC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		184E5D0E191DC38700928AAC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		184E5D10191DC3B600928AAC /* HDRNearViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRNearViewCtrl.h; sourceTree = "<group>"; };
+		184E5D11191DC3B600928AAC /* HDRNearViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRNearViewCtrl.m; sourceTree = "<group>"; };
 		A32EEB1B1914BC5500B4F14C /* hdrdemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hdrdemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32EEB1E1914BC5500B4F14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A32EEB201914BC5500B4F14C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E5D0F191DC38700928AAC /* CoreLocation.framework in Frameworks */,
+				184E5D0D191DC37A00928AAC /* MapKit.framework in Frameworks */,
 				A32EEB211914BC5500B4F14C /* CoreGraphics.framework in Frameworks */,
 				A32EEB231914BC5500B4F14C /* UIKit.framework in Frameworks */,
 				A32EEB1F1914BC5500B4F14C /* Foundation.framework in Frameworks */,
@@ -147,6 +164,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184E5D03191DC2F100928AAC /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				184E5D04191DC2F100928AAC /* home.png */,
+				184E5D05191DC2F100928AAC /* more.png */,
+				184E5D06191DC2F100928AAC /* near.png */,
+				184E5D07191DC2F100928AAC /* user.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		A32EEB121914BC5500B4F14C = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +198,8 @@
 		A32EEB1D1914BC5500B4F14C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				184E5D0E191DC38700928AAC /* CoreLocation.framework */,
+				184E5D0C191DC37A00928AAC /* MapKit.framework */,
 				A32EEB1E1914BC5500B4F14C /* Foundation.framework */,
 				A32EEB201914BC5500B4F14C /* CoreGraphics.framework */,
 				A32EEB221914BC5500B4F14C /* UIKit.framework */,
@@ -240,6 +270,8 @@
 		A32EEB541914BCE100B4F14C /* near */ = {
 			isa = PBXGroup;
 			children = (
+				184E5D10191DC3B600928AAC /* HDRNearViewCtrl.h */,
+				184E5D11191DC3B600928AAC /* HDRNearViewCtrl.m */,
 			);
 			name = near;
 			sourceTree = "<group>";
@@ -322,6 +354,7 @@
 		A32EEB6F1914F95100B4F14C /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				184E5D03191DC2F100928AAC /* icons */,
 				A32EEB701914F95100B4F14C /* testiad.png */,
 				A32EEB78191526A500B4F14C /* ManList.plist */,
 				A3D7D4D11915A04100114BEF /* WomanList.plist */,
@@ -488,9 +521,13 @@
 			files = (
 				A3D1534919184DFF00E328D0 /* Disease.plist in Resources */,
 				A32EEB711914F95100B4F14C /* testiad.png in Resources */,
+				184E5D0B191DC2F100928AAC /* user.png in Resources */,
+				184E5D08191DC2F100928AAC /* home.png in Resources */,
 				A32EEB371914BC5500B4F14C /* Images.xcassets in Resources */,
 				A32EEB291914BC5500B4F14C /* InfoPlist.strings in Resources */,
+				184E5D0A191DC2F100928AAC /* near.png in Resources */,
 				A3BA86911919108500480E32 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				184E5D09191DC2F100928AAC /* more.png in Resources */,
 				A32EEB79191526A500B4F14C /* ManList.plist in Resources */,
 				A32EEB321914BC5500B4F14C /* Main.storyboard in Resources */,
 				A3D7D4D21915A04100114BEF /* WomanList.plist in Resources */,
@@ -523,6 +560,7 @@
 				A32EEB2F1914BC5500B4F14C /* HDRAppDelegate.m in Sources */,
 				A32EEB6E1914F1EE00B4F14C /* IAdView.m in Sources */,
 				A3D7D4E51915A80700114BEF /* HDRPedometerViewController.m in Sources */,
+				184E5D12191DC3B600928AAC /* HDRNearViewCtrl.m in Sources */,
 				A3D7D4DF1915A7A900114BEF /* HDRInfoBaseViewController.m in Sources */,
 				A32EEB6B1914EE3400B4F14C /* IAdObj.m in Sources */,
 				A3BA868C1919108500480E32 /* ChineseToPinyinResource.m in Sources */,
