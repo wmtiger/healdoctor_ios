@@ -23,7 +23,7 @@
 
 - (void)initAdView
 {
-    NSLog(@"initadview");
+//    NSLog(@"initadview");
     NSString * picsURL = @"testiad.png";
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
@@ -65,7 +65,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"ok");
+//    NSLog(@"ok");
     self.returnData = [[NSMutableData alloc]init];
     self.response = (NSHTTPURLResponse *)response;
 }

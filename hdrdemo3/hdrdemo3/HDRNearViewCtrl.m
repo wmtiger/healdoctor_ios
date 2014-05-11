@@ -25,7 +25,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.locationManager = [[CLLocationManager alloc]init];
     }
     return self;
 }
@@ -35,13 +34,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // delegate
-    self.locationManager.delegate = self;
-    // 精度
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.distanceFilter = kCLHeadingFilterNone;
-    // 开始更新位置
-    [self.locationManager startUpdatingLocation];
+    NSLog(@"near viewDidLoad");
+    if ([CLLocationManager locationServicesEnabled]) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        // 精度
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.distanceFilter = kCLHeadingFilterNone;
+        // 开始更新位置
+        [self.locationManager startUpdatingLocation];
+        
+        self.myGeocoder = [[CLGeocoder alloc] init];
+        
+        
+    }
+    else
+    {
+        NSLog(@"Location services are not enabled");
+    }
     
 //    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, [UIScreen mainScreen].bounds.size.height-20-44)];
 //    [self.view addSubview:self.mapView];
@@ -72,7 +82,39 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    CLLocation * crtLocation = [locations lastObject];
+    NSLog(@"%3.5f, %3.5f", crtLocation.coordinate.latitude, crtLocation.coordinate.longitude);
+    [self testGeoLocation:crtLocation];
+    NSLog(@"%@", crtLocation);
+}
+
+- (void)testGeoLocation:(CLLocation *)location
+{
+    [self.myGeocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error == nil && [placemarks count] > 0) {
+            CLPlacemark * placemark = [placemarks objectAtIndex:0];
+            
+            NSLog(@"Country = %@", placemark.country);
+            NSLog(@"Postal Coed = %@", placemark.postalCode);
+            NSLog(@"Locality = %@", placemark.locality);
+            NSLog(@"dic = %@", placemark.addressDictionary);
+            NSLog(@"dic FormattedAddressLines = %@", [placemark.addressDictionary objectForKey:@"FormattedAddressLines"]);
+            NSLog(@"dic Name = %@", [placemark.addressDictionary objectForKey:@"Name"]);
+            NSLog(@"dic State = %@", [placemark.addressDictionary objectForKey:@"State"]);
+            NSLog(@"dic Street = %@", [placemark.addressDictionary objectForKey:@"Street"]);
+            NSLog(@"dic SubLocality= %@", [placemark.addressDictionary objectForKey:@"SubLocality"]);
+            NSLog(@"dic SubThoroughfare= %@", [placemark.addressDictionary objectForKey:@"SubThoroughfare"]);
+            NSLog(@"dic Thoroughfare = %@", [placemark.addressDictionary objectForKey:@"Thoroughfare"]);
+        }
+        else if (error == nil && [placemarks count] == 0)
+        {
+            NSLog(@"No results were returned");
+        }
+        else if (error == nil)
+        {
+            NSLog(@"An error occurred = %@", error);
+        }
+    }];
 }
 
 -(void)zoomToAnnotations
