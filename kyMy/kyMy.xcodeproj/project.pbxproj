@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3359A65192259D600CFA3B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A64192259D600CFA3B1 /* Foundation.framework */; };
+		A3359A67192259D600CFA3B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A66192259D600CFA3B1 /* CoreGraphics.framework */; };
+		A3359A69192259D600CFA3B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A68192259D600CFA3B1 /* UIKit.framework */; };
+		A3359A6F192259D600CFA3B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3359A6D192259D600CFA3B1 /* InfoPlist.strings */; };
+		A3359A71192259D600CFA3B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3359A70192259D600CFA3B1 /* main.m */; };
+		A3359A75192259D600CFA3B1 /* HDRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3359A74192259D600CFA3B1 /* HDRAppDelegate.m */; };
+		A3359A78192259D600CFA3B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3359A76192259D600CFA3B1 /* Main.storyboard */; };
+		A3359A7B192259D600CFA3B1 /* HDRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3359A7A192259D600CFA3B1 /* HDRViewController.m */; };
+		A3359A7D192259D600CFA3B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3359A7C192259D600CFA3B1 /* Images.xcassets */; };
+		A3359A84192259D600CFA3B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A83192259D600CFA3B1 /* XCTest.framework */; };
+		A3359A85192259D600CFA3B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A64192259D600CFA3B1 /* Foundation.framework */; };
+		A3359A86192259D600CFA3B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3359A68192259D600CFA3B1 /* UIKit.framework */; };
+		A3359A8E192259D600CFA3B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3359A8C192259D600CFA3B1 /* InfoPlist.strings */; };
+		A3359A90192259D600CFA3B1 /* kyMyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3359A8F192259D600CFA3B1 /* kyMyTests.m */; };
+		A3ABAFD0192424A400B7B528 /* HDRSearchCityAreaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAFCF192424A400B7B528 /* HDRSearchCityAreaTableViewController.m */; };
+		A3ABAFD31924255C00B7B528 /* HDRSearchDisplayCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAFD21924255C00B7B528 /* HDRSearchDisplayCtrl.m */; };
+		A3ABAFD7192427E100B7B528 /* HDRSystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAFD6192427E100B7B528 /* HDRSystemUtil.m */; };
+		A3E8F74E1923A05D00597EDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E8F74B1923A05D00597EDD /* Default-568h@2x.png */; };
+		A3E8F74F1923A05D00597EDD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E8F74C1923A05D00597EDD /* Default.png */; };
+		A3E8F7501923A05D00597EDD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E8F74D1923A05D00597EDD /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3359A87192259D600CFA3B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3359A59192259D600CFA3B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3359A60192259D600CFA3B1;
+			remoteInfo = kyMy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3359A61192259D600CFA3B1 /* kyMy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyMy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3359A64192259D600CFA3B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3359A66192259D600CFA3B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3359A68192259D600CFA3B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3359A6C192259D600CFA3B1 /* kyMy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kyMy-Info.plist"; sourceTree = "<group>"; };
+		A3359A6E192259D600CFA3B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3359A70192259D600CFA3B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3359A72192259D600CFA3B1 /* kyMy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kyMy-Prefix.pch"; sourceTree = "<group>"; };
+		A3359A73192259D600CFA3B1 /* HDRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRAppDelegate.h; sourceTree = "<group>"; };
+		A3359A74192259D600CFA3B1 /* HDRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRAppDelegate.m; sourceTree = "<group>"; };
+		A3359A77192259D600CFA3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3359A79192259D600CFA3B1 /* HDRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRViewController.h; sourceTree = "<group>"; };
+		A3359A7A192259D600CFA3B1 /* HDRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRViewController.m; sourceTree = "<group>"; };
+		A3359A7C192259D600CFA3B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3359A82192259D600CFA3B1 /* kyMyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kyMyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3359A83192259D600CFA3B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A3359A8B192259D600CFA3B1 /* kyMyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kyMyTests-Info.plist"; sourceTree = "<group>"; };
+		A3359A8D192259D600CFA3B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3359A8F192259D600CFA3B1 /* kyMyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kyMyTests.m; sourceTree = "<group>"; };
+		A3ABAFCE192424A400B7B528 /* HDRSearchCityAreaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRSearchCityAreaTableViewController.h; path = test/HDRSearchCityAreaTableViewController.h; sourceTree = "<group>"; };
+		A3ABAFCF192424A400B7B528 /* HDRSearchCityAreaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRSearchCityAreaTableViewController.m; path = test/HDRSearchCityAreaTableViewController.m; sourceTree = "<group>"; };
+		A3ABAFD11924255C00B7B528 /* HDRSearchDisplayCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRSearchDisplayCtrl.h; path = test/HDRSearchDisplayCtrl.h; sourceTree = "<group>"; };
+		A3ABAFD21924255C00B7B528 /* HDRSearchDisplayCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRSearchDisplayCtrl.m; path = test/HDRSearchDisplayCtrl.m; sourceTree = "<group>"; };
+		A3ABAFD5192427E100B7B528 /* HDRSystemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRSystemUtil.h; path = tools/HDRSystemUtil.h; sourceTree = "<group>"; };
+		A3ABAFD6192427E100B7B528 /* HDRSystemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRSystemUtil.m; path = tools/HDRSystemUtil.m; sourceTree = "<group>"; };
+		A3E8F74B1923A05D00597EDD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "assets/Default-568h@2x.png"; sourceTree = "<group>"; };
+		A3E8F74C1923A05D00597EDD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = assets/Default.png; sourceTree = "<group>"; };
+		A3E8F74D1923A05D00597EDD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "assets/Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3359A5E192259D600CFA3B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3359A67192259D600CFA3B1 /* CoreGraphics.framework in Frameworks */,
+				A3359A69192259D600CFA3B1 /* UIKit.framework in Frameworks */,
+				A3359A65192259D600CFA3B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3359A7F192259D600CFA3B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3359A84192259D600CFA3B1 /* XCTest.framework in Frameworks */,
+				A3359A86192259D600CFA3B1 /* UIKit.framework in Frameworks */,
+				A3359A85192259D600CFA3B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3359A58192259D600CFA3B1 = {
+			isa = PBXGroup;
+			children = (
+				A3359A6A192259D600CFA3B1 /* kyMy */,
+				A3359A89192259D600CFA3B1 /* kyMyTests */,
+				A3359A63192259D600CFA3B1 /* Frameworks */,
+				A3359A62192259D600CFA3B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3359A62192259D600CFA3B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3359A61192259D600CFA3B1 /* kyMy.app */,
+				A3359A82192259D600CFA3B1 /* kyMyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3359A63192259D600CFA3B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3359A64192259D600CFA3B1 /* Foundation.framework */,
+				A3359A66192259D600CFA3B1 /* CoreGraphics.framework */,
+				A3359A68192259D600CFA3B1 /* UIKit.framework */,
+				A3359A83192259D600CFA3B1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3359A6A192259D600CFA3B1 /* kyMy */ = {
+			isa = PBXGroup;
+			children = (
+				A3ABAFD4192427B600B7B528 /* tools */,
+				A3E8F76D1923A47600597EDD /* more */,
+				A3E8F76C1923A46400597EDD /* user */,
+				A3E8F76B1923A45A00597EDD /* near */,
+				A3E8F76A1923A45300597EDD /* home */,
+				A3E8F7691923A44A00597EDD /* test */,
+				A3E8F74B1923A05D00597EDD /* Default-568h@2x.png */,
+				A3E8F74C1923A05D00597EDD /* Default.png */,
+				A3E8F74D1923A05D00597EDD /* Default@2x.png */,
+				A3359A73192259D600CFA3B1 /* HDRAppDelegate.h */,
+				A3359A74192259D600CFA3B1 /* HDRAppDelegate.m */,
+				A3359A76192259D600CFA3B1 /* Main.storyboard */,
+				A3359A79192259D600CFA3B1 /* HDRViewController.h */,
+				A3359A7A192259D600CFA3B1 /* HDRViewController.m */,
+				A3359A7C192259D600CFA3B1 /* Images.xcassets */,
+				A3359A6B192259D600CFA3B1 /* Supporting Files */,
+			);
+			path = kyMy;
+			sourceTree = "<group>";
+		};
+		A3359A6B192259D600CFA3B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3359A6C192259D600CFA3B1 /* kyMy-Info.plist */,
+				A3359A6D192259D600CFA3B1 /* InfoPlist.strings */,
+				A3359A70192259D600CFA3B1 /* main.m */,
+				A3359A72192259D600CFA3B1 /* kyMy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3359A89192259D600CFA3B1 /* kyMyTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3359A8F192259D600CFA3B1 /* kyMyTests.m */,
+				A3359A8A192259D600CFA3B1 /* Supporting Files */,
+			);
+			path = kyMyTests;
+			sourceTree = "<group>";
+		};
+		A3359A8A192259D600CFA3B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3359A8B192259D600CFA3B1 /* kyMyTests-Info.plist */,
+				A3359A8C192259D600CFA3B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3ABAFD4192427B600B7B528 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				A3ABAFD5192427E100B7B528 /* HDRSystemUtil.h */,
+				A3ABAFD6192427E100B7B528 /* HDRSystemUtil.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		A3E8F7691923A44A00597EDD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				A3ABAFCE192424A400B7B528 /* HDRSearchCityAreaTableViewController.h */,
+				A3ABAFCF192424A400B7B528 /* HDRSearchCityAreaTableViewController.m */,
+				A3ABAFD11924255C00B7B528 /* HDRSearchDisplayCtrl.h */,
+				A3ABAFD21924255C00B7B528 /* HDRSearchDisplayCtrl.m */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		A3E8F76A1923A45300597EDD /* home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		A3E8F76B1923A45A00597EDD /* near */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = near;
+			sourceTree = "<group>";
+		};
+		A3E8F76C1923A46400597EDD /* user */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		A3E8F76D1923A47600597EDD /* more */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = more;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3359A60192259D600CFA3B1 /* kyMy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3359A93192259D600CFA3B1 /* Build configuration list for PBXNativeTarget "kyMy" */;
+			buildPhases = (
+				A3359A5D192259D600CFA3B1 /* Sources */,
+				A3359A5E192259D600CFA3B1 /* Frameworks */,
+				A3359A5F192259D600CFA3B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kyMy;
+			productName = kyMy;
+			productReference = A3359A61192259D600CFA3B1 /* kyMy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3359A81192259D600CFA3B1 /* kyMyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3359A96192259D600CFA3B1 /* Build configuration list for PBXNativeTarget "kyMyTests" */;
+			buildPhases = (
+				A3359A7E192259D600CFA3B1 /* Sources */,
+				A3359A7F192259D600CFA3B1 /* Frameworks */,
+				A3359A80192259D600CFA3B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3359A88192259D600CFA3B1 /* PBXTargetDependency */,
+			);
+			name = kyMyTests;
+			productName = kyMyTests;
+			productReference = A3359A82192259D600CFA3B1 /* kyMyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3359A59192259D600CFA3B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HDR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = bf;
+				TargetAttributes = {
+					A3359A81192259D600CFA3B1 = {
+						TestTargetID = A3359A60192259D600CFA3B1;
+					};
+				};
+			};
+			buildConfigurationList = A3359A5C192259D600CFA3B1 /* Build configuration list for PBXProject "kyMy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3359A58192259D600CFA3B1;
+			productRefGroup = A3359A62192259D600CFA3B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3359A60192259D600CFA3B1 /* kyMy */,
+				A3359A81192259D600CFA3B1 /* kyMyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3359A5F192259D600CFA3B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E8F7501923A05D00597EDD /* Default@2x.png in Resources */,
+				A3359A7D192259D600CFA3B1 /* Images.xcassets in Resources */,
+				A3E8F74E1923A05D00597EDD /* Default-568h@2x.png in Resources */,
+				A3359A6F192259D600CFA3B1 /* InfoPlist.strings in Resources */,
+				A3359A78192259D600CFA3B1 /* Main.storyboard in Resources */,
+				A3E8F74F1923A05D00597EDD /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3359A80192259D600CFA3B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3359A8E192259D600CFA3B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3359A5D192259D600CFA3B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3359A71192259D600CFA3B1 /* main.m in Sources */,
+				A3359A75192259D600CFA3B1 /* HDRAppDelegate.m in Sources */,
+				A3ABAFD31924255C00B7B528 /* HDRSearchDisplayCtrl.m in Sources */,
+				A3ABAFD7192427E100B7B528 /* HDRSystemUtil.m in Sources */,
+				A3ABAFD0192424A400B7B528 /* HDRSearchCityAreaTableViewController.m in Sources */,
+				A3359A7B192259D600CFA3B1 /* HDRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3359A7E192259D600CFA3B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3359A90192259D600CFA3B1 /* kyMyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3359A88192259D600CFA3B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3359A60192259D600CFA3B1 /* kyMy */;
+			targetProxy = A3359A87192259D600CFA3B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3359A6D192259D600CFA3B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3359A6E192259D600CFA3B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3359A76192259D600CFA3B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3359A77192259D600CFA3B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3359A8C192259D600CFA3B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3359A8D192259D600CFA3B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3359A91192259D600CFA3B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A3359A92192259D600CFA3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3359A94192259D600CFA3B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kyMy/kyMy-Prefix.pch";
+				INFOPLIST_FILE = "kyMy/kyMy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3359A95192259D600CFA3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kyMy/kyMy-Prefix.pch";
+				INFOPLIST_FILE = "kyMy/kyMy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3359A97192259D600CFA3B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kyMy.app/kyMy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kyMy/kyMy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "kyMyTests/kyMyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A3359A98192259D600CFA3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kyMy.app/kyMy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kyMy/kyMy-Prefix.pch";
+				INFOPLIST_FILE = "kyMyTests/kyMyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3359A5C192259D600CFA3B1 /* Build configuration list for PBXProject "kyMy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3359A91192259D600CFA3B1 /* Debug */,
+				A3359A92192259D600CFA3B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3359A93192259D600CFA3B1 /* Build configuration list for PBXNativeTarget "kyMy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3359A94192259D600CFA3B1 /* Debug */,
+				A3359A95192259D600CFA3B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3359A96192259D600CFA3B1 /* Build configuration list for PBXNativeTarget "kyMyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3359A97192259D600CFA3B1 /* Debug */,
+				A3359A98192259D600CFA3B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3359A59192259D600CFA3B1 /* Project object */;
+}
