@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180F40C3192864980023287A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F40C0192864980023287A /* Default-568h@2x.png */; };
+		180F40C4192864980023287A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F40C1192864980023287A /* Default.png */; };
+		180F40C5192864980023287A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F40C2192864980023287A /* Default@2x.png */; };
+		180F40C9192866AA0023287A /* HDRHomeHeadSearchCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40C8192866AA0023287A /* HDRHomeHeadSearchCtrl.m */; };
+		180F40CC192868500023287A /* HDRHomeHeadSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40CB192868500023287A /* HDRHomeHeadSearchBar.m */; };
+		180F40CF19286D630023287A /* HDRHomeNewsBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40CE19286D630023287A /* HDRHomeNewsBar.m */; };
+		180F40D219286EAB0023287A /* HDRHomeFunsBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40D119286EAB0023287A /* HDRHomeFunsBar.m */; };
+		180F40D719288EF80023287A /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40D419288EF80023287A /* CycleScrollView.m */; };
+		180F40D819288EF80023287A /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40D619288EF80023287A /* NSTimer+Addition.m */; };
+		180F40DB19288F250023287A /* HDRHomeAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F40DA19288F250023287A /* HDRHomeAdsView.m */; };
+		180F410E192898A30023287A /* adholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F410C192898A30023287A /* adholder.png */; };
+		180F411319289E860023287A /* IAdObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F411019289E860023287A /* IAdObj.m */; };
+		180F411419289E860023287A /* IAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F411219289E860023287A /* IAdView.m */; };
+		180F41171928A1BF0023287A /* HDRHomeAtentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F41161928A1BF0023287A /* HDRHomeAtentionView.m */; };
+		180F411A1928A6220023287A /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F41181928A6220023287A /* blue.png */; };
+		180F411B1928A6220023287A /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F41191928A6220023287A /* green.png */; };
+		180F411E1928A75C0023287A /* HDRHomeAtentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */; };
+		18640B4B1928560D00338066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4A1928560D00338066 /* Foundation.framework */; };
+		18640B4D1928560D00338066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4C1928560D00338066 /* CoreGraphics.framework */; };
+		18640B4F1928560D00338066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4E1928560D00338066 /* UIKit.framework */; };
+		18640B551928560D00338066 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18640B531928560D00338066 /* InfoPlist.strings */; };
+		18640B571928560D00338066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640B561928560D00338066 /* main.m */; };
+		18640B5B1928560D00338066 /* HDRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640B5A1928560D00338066 /* HDRAppDelegate.m */; };
+		18640B5D1928560D00338066 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18640B5C1928560D00338066 /* Images.xcassets */; };
+		18640B641928560D00338066 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B631928560D00338066 /* XCTest.framework */; };
+		18640B651928560D00338066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4A1928560D00338066 /* Foundation.framework */; };
+		18640B661928560D00338066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4E1928560D00338066 /* UIKit.framework */; };
+		18640B6E1928560D00338066 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18640B6C1928560D00338066 /* InfoPlist.strings */; };
+		18640B701928560D00338066 /* hdrdemo5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640B6F1928560D00338066 /* hdrdemo5Tests.m */; };
+		18640BA51928578E00338066 /* HDRRootCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BA41928578E00338066 /* HDRRootCtrl.m */; };
+		18640BA81928580A00338066 /* HDRHomeNavCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BA71928580A00338066 /* HDRHomeNavCtrl.m */; };
+		18640BAB1928585000338066 /* HDRHomeRootCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BAA1928585000338066 /* HDRHomeRootCtrl.m */; };
+		18640BAE19285A5100338066 /* HDRNearCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BAD19285A5100338066 /* HDRNearCtrl.m */; };
+		18640BB119285DCC00338066 /* HDRUserCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BB019285DCC00338066 /* HDRUserCtrl.m */; };
+		18640BB419285DDC00338066 /* HDRMoreCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BB319285DDC00338066 /* HDRMoreCtrl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18640B671928560D00338066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18640B3F1928560D00338066 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18640B461928560D00338066;
+			remoteInfo = hdrdemo5;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		180F40C0192864980023287A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		180F40C1192864980023287A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		180F40C2192864980023287A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		180F40C7192866AA0023287A /* HDRHomeHeadSearchCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeHeadSearchCtrl.h; sourceTree = "<group>"; };
+		180F40C8192866AA0023287A /* HDRHomeHeadSearchCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeHeadSearchCtrl.m; sourceTree = "<group>"; };
+		180F40CA192868500023287A /* HDRHomeHeadSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeHeadSearchBar.h; sourceTree = "<group>"; };
+		180F40CB192868500023287A /* HDRHomeHeadSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeHeadSearchBar.m; sourceTree = "<group>"; };
+		180F40CD19286D630023287A /* HDRHomeNewsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeNewsBar.h; sourceTree = "<group>"; };
+		180F40CE19286D630023287A /* HDRHomeNewsBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeNewsBar.m; sourceTree = "<group>"; };
+		180F40D019286EAB0023287A /* HDRHomeFunsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeFunsBar.h; sourceTree = "<group>"; };
+		180F40D119286EAB0023287A /* HDRHomeFunsBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeFunsBar.m; sourceTree = "<group>"; };
+		180F40D319288EF80023287A /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
+		180F40D419288EF80023287A /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollView.m; sourceTree = "<group>"; };
+		180F40D519288EF80023287A /* NSTimer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Addition.h"; sourceTree = "<group>"; };
+		180F40D619288EF80023287A /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
+		180F40D919288F250023287A /* HDRHomeAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeAdsView.h; sourceTree = "<group>"; };
+		180F40DA19288F250023287A /* HDRHomeAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeAdsView.m; sourceTree = "<group>"; };
+		180F410C192898A30023287A /* adholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adholder.png; sourceTree = "<group>"; };
+		180F410F19289E860023287A /* IAdObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdObj.h; sourceTree = "<group>"; };
+		180F411019289E860023287A /* IAdObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAdObj.m; sourceTree = "<group>"; };
+		180F411119289E860023287A /* IAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdView.h; sourceTree = "<group>"; };
+		180F411219289E860023287A /* IAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAdView.m; sourceTree = "<group>"; };
+		180F41151928A1BF0023287A /* HDRHomeAtentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeAtentionView.h; sourceTree = "<group>"; };
+		180F41161928A1BF0023287A /* HDRHomeAtentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeAtentionView.m; sourceTree = "<group>"; };
+		180F41181928A6220023287A /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		180F41191928A6220023287A /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		180F411C1928A75C0023287A /* HDRHomeAtentionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeAtentionCell.h; sourceTree = "<group>"; };
+		180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeAtentionCell.m; sourceTree = "<group>"; };
+		18640B471928560D00338066 /* hdrdemo5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hdrdemo5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18640B4A1928560D00338066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18640B4C1928560D00338066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18640B4E1928560D00338066 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18640B521928560D00338066 /* hdrdemo5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hdrdemo5-Info.plist"; sourceTree = "<group>"; };
+		18640B541928560D00338066 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18640B561928560D00338066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18640B581928560D00338066 /* hdrdemo5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hdrdemo5-Prefix.pch"; sourceTree = "<group>"; };
+		18640B591928560D00338066 /* HDRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRAppDelegate.h; sourceTree = "<group>"; };
+		18640B5A1928560D00338066 /* HDRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRAppDelegate.m; sourceTree = "<group>"; };
+		18640B5C1928560D00338066 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		18640B621928560D00338066 /* hdrdemo5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hdrdemo5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18640B631928560D00338066 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		18640B6B1928560D00338066 /* hdrdemo5Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hdrdemo5Tests-Info.plist"; sourceTree = "<group>"; };
+		18640B6D1928560D00338066 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18640B6F1928560D00338066 /* hdrdemo5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hdrdemo5Tests.m; sourceTree = "<group>"; };
+		18640BA31928578E00338066 /* HDRRootCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRRootCtrl.h; sourceTree = "<group>"; };
+		18640BA41928578E00338066 /* HDRRootCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRRootCtrl.m; sourceTree = "<group>"; };
+		18640BA61928580A00338066 /* HDRHomeNavCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeNavCtrl.h; sourceTree = "<group>"; };
+		18640BA71928580A00338066 /* HDRHomeNavCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeNavCtrl.m; sourceTree = "<group>"; };
+		18640BA91928585000338066 /* HDRHomeRootCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeRootCtrl.h; sourceTree = "<group>"; };
+		18640BAA1928585000338066 /* HDRHomeRootCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeRootCtrl.m; sourceTree = "<group>"; };
+		18640BAC19285A5100338066 /* HDRNearCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRNearCtrl.h; sourceTree = "<group>"; };
+		18640BAD19285A5100338066 /* HDRNearCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRNearCtrl.m; sourceTree = "<group>"; };
+		18640BAF19285DCC00338066 /* HDRUserCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRUserCtrl.h; sourceTree = "<group>"; };
+		18640BB019285DCC00338066 /* HDRUserCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRUserCtrl.m; sourceTree = "<group>"; };
+		18640BB219285DDC00338066 /* HDRMoreCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRMoreCtrl.h; sourceTree = "<group>"; };
+		18640BB319285DDC00338066 /* HDRMoreCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRMoreCtrl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18640B441928560D00338066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640B4D1928560D00338066 /* CoreGraphics.framework in Frameworks */,
+				18640B4F1928560D00338066 /* UIKit.framework in Frameworks */,
+				18640B4B1928560D00338066 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18640B5F1928560D00338066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640B641928560D00338066 /* XCTest.framework in Frameworks */,
+				18640B661928560D00338066 /* UIKit.framework in Frameworks */,
+				18640B651928560D00338066 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180F40BE192864980023287A /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				180F410B192898A30023287A /* images */,
+				180F410D192898A30023287A /* images@2x */,
+				180F40BF192864980023287A /* launchimages */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		180F40BF192864980023287A /* launchimages */ = {
+			isa = PBXGroup;
+			children = (
+				180F40C0192864980023287A /* Default-568h@2x.png */,
+				180F40C1192864980023287A /* Default.png */,
+				180F40C2192864980023287A /* Default@2x.png */,
+			);
+			path = launchimages;
+			sourceTree = "<group>";
+		};
+		180F40C61928666C0023287A /* mainview */ = {
+			isa = PBXGroup;
+			children = (
+				180F410F19289E860023287A /* IAdObj.h */,
+				180F411019289E860023287A /* IAdObj.m */,
+				180F411119289E860023287A /* IAdView.h */,
+				180F411219289E860023287A /* IAdView.m */,
+				180F40D319288EF80023287A /* CycleScrollView.h */,
+				180F40D419288EF80023287A /* CycleScrollView.m */,
+				180F40D519288EF80023287A /* NSTimer+Addition.h */,
+				180F40D619288EF80023287A /* NSTimer+Addition.m */,
+				180F40C7192866AA0023287A /* HDRHomeHeadSearchCtrl.h */,
+				180F40C8192866AA0023287A /* HDRHomeHeadSearchCtrl.m */,
+				180F40CA192868500023287A /* HDRHomeHeadSearchBar.h */,
+				180F40CB192868500023287A /* HDRHomeHeadSearchBar.m */,
+				180F40CD19286D630023287A /* HDRHomeNewsBar.h */,
+				180F40CE19286D630023287A /* HDRHomeNewsBar.m */,
+				180F40D019286EAB0023287A /* HDRHomeFunsBar.h */,
+				180F40D119286EAB0023287A /* HDRHomeFunsBar.m */,
+				180F40D919288F250023287A /* HDRHomeAdsView.h */,
+				180F40DA19288F250023287A /* HDRHomeAdsView.m */,
+				180F41151928A1BF0023287A /* HDRHomeAtentionView.h */,
+				180F41161928A1BF0023287A /* HDRHomeAtentionView.m */,
+				180F411C1928A75C0023287A /* HDRHomeAtentionCell.h */,
+				180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */,
+			);
+			path = mainview;
+			sourceTree = "<group>";
+		};
+		180F40F3192893F80023287A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		180F410B192898A30023287A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				180F41181928A6220023287A /* blue.png */,
+				180F41191928A6220023287A /* green.png */,
+				180F410C192898A30023287A /* adholder.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		180F410D192898A30023287A /* images@2x */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "images@2x";
+			sourceTree = "<group>";
+		};
+		180F411F1928AFD20023287A /* drug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = drug;
+			sourceTree = "<group>";
+		};
+		180F41201928AFD20023287A /* exam */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = exam;
+			sourceTree = "<group>";
+		};
+		180F41211928AFD20023287A /* hospital */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = hospital;
+			sourceTree = "<group>";
+		};
+		180F41221928AFD20023287A /* tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		18640B3E1928560D00338066 = {
+			isa = PBXGroup;
+			children = (
+				18640B501928560D00338066 /* hdrdemo5 */,
+				18640B691928560D00338066 /* hdrdemo5Tests */,
+				18640B491928560D00338066 /* Frameworks */,
+				18640B481928560D00338066 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18640B481928560D00338066 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18640B471928560D00338066 /* hdrdemo5.app */,
+				18640B621928560D00338066 /* hdrdemo5Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18640B491928560D00338066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18640B4A1928560D00338066 /* Foundation.framework */,
+				18640B4C1928560D00338066 /* CoreGraphics.framework */,
+				18640B4E1928560D00338066 /* UIKit.framework */,
+				18640B631928560D00338066 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18640B501928560D00338066 /* hdrdemo5 */ = {
+			isa = PBXGroup;
+			children = (
+				180F40F3192893F80023287A /* libs */,
+				180F40BE192864980023287A /* assets */,
+				18640B9C1928577900338066 /* src */,
+				18640B591928560D00338066 /* HDRAppDelegate.h */,
+				18640B5A1928560D00338066 /* HDRAppDelegate.m */,
+				18640B5C1928560D00338066 /* Images.xcassets */,
+				18640B511928560D00338066 /* Supporting Files */,
+			);
+			path = hdrdemo5;
+			sourceTree = "<group>";
+		};
+		18640B511928560D00338066 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18640B521928560D00338066 /* hdrdemo5-Info.plist */,
+				18640B531928560D00338066 /* InfoPlist.strings */,
+				18640B561928560D00338066 /* main.m */,
+				18640B581928560D00338066 /* hdrdemo5-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18640B691928560D00338066 /* hdrdemo5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				18640B6F1928560D00338066 /* hdrdemo5Tests.m */,
+				18640B6A1928560D00338066 /* Supporting Files */,
+			);
+			path = hdrdemo5Tests;
+			sourceTree = "<group>";
+		};
+		18640B6A1928560D00338066 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18640B6B1928560D00338066 /* hdrdemo5Tests-Info.plist */,
+				18640B6C1928560D00338066 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18640B9C1928577900338066 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				18640B9D1928577900338066 /* comps */,
+				18640B9E1928577900338066 /* home */,
+				18640B9F1928577900338066 /* more */,
+				18640BA01928577900338066 /* near */,
+				18640BA11928577900338066 /* root */,
+				18640BA21928577900338066 /* user */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		18640B9D1928577900338066 /* comps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = comps;
+			sourceTree = "<group>";
+		};
+		18640B9E1928577900338066 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				180F411F1928AFD20023287A /* drug */,
+				180F41201928AFD20023287A /* exam */,
+				180F41211928AFD20023287A /* hospital */,
+				180F41221928AFD20023287A /* tool */,
+				180F40C61928666C0023287A /* mainview */,
+				18640BA61928580A00338066 /* HDRHomeNavCtrl.h */,
+				18640BA71928580A00338066 /* HDRHomeNavCtrl.m */,
+				18640BA91928585000338066 /* HDRHomeRootCtrl.h */,
+				18640BAA1928585000338066 /* HDRHomeRootCtrl.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		18640B9F1928577900338066 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				18640BB219285DDC00338066 /* HDRMoreCtrl.h */,
+				18640BB319285DDC00338066 /* HDRMoreCtrl.m */,
+			);
+			path = more;
+			sourceTree = "<group>";
+		};
+		18640BA01928577900338066 /* near */ = {
+			isa = PBXGroup;
+			children = (
+				18640BAC19285A5100338066 /* HDRNearCtrl.h */,
+				18640BAD19285A5100338066 /* HDRNearCtrl.m */,
+			);
+			path = near;
+			sourceTree = "<group>";
+		};
+		18640BA11928577900338066 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				18640BA31928578E00338066 /* HDRRootCtrl.h */,
+				18640BA41928578E00338066 /* HDRRootCtrl.m */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		18640BA21928577900338066 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				18640BAF19285DCC00338066 /* HDRUserCtrl.h */,
+				18640BB019285DCC00338066 /* HDRUserCtrl.m */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18640B461928560D00338066 /* hdrdemo5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18640B731928560D00338066 /* Build configuration list for PBXNativeTarget "hdrdemo5" */;
+			buildPhases = (
+				18640B431928560D00338066 /* Sources */,
+				18640B441928560D00338066 /* Frameworks */,
+				18640B451928560D00338066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hdrdemo5;
+			productName = hdrdemo5;
+			productReference = 18640B471928560D00338066 /* hdrdemo5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18640B611928560D00338066 /* hdrdemo5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18640B761928560D00338066 /* Build configuration list for PBXNativeTarget "hdrdemo5Tests" */;
+			buildPhases = (
+				18640B5E1928560D00338066 /* Sources */,
+				18640B5F1928560D00338066 /* Frameworks */,
+				18640B601928560D00338066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18640B681928560D00338066 /* PBXTargetDependency */,
+			);
+			name = hdrdemo5Tests;
+			productName = hdrdemo5Tests;
+			productReference = 18640B621928560D00338066 /* hdrdemo5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18640B3F1928560D00338066 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HDR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					18640B611928560D00338066 = {
+						TestTargetID = 18640B461928560D00338066;
+					};
+				};
+			};
+			buildConfigurationList = 18640B421928560D00338066 /* Build configuration list for PBXProject "hdrdemo5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18640B3E1928560D00338066;
+			productRefGroup = 18640B481928560D00338066 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18640B461928560D00338066 /* hdrdemo5 */,
+				18640B611928560D00338066 /* hdrdemo5Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18640B451928560D00338066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640B551928560D00338066 /* InfoPlist.strings in Resources */,
+				18640B5D1928560D00338066 /* Images.xcassets in Resources */,
+				180F40C5192864980023287A /* Default@2x.png in Resources */,
+				180F40C3192864980023287A /* Default-568h@2x.png in Resources */,
+				180F410E192898A30023287A /* adholder.png in Resources */,
+				180F411B1928A6220023287A /* green.png in Resources */,
+				180F411A1928A6220023287A /* blue.png in Resources */,
+				180F40C4192864980023287A /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18640B601928560D00338066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640B6E1928560D00338066 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18640B431928560D00338066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640BA81928580A00338066 /* HDRHomeNavCtrl.m in Sources */,
+				180F411419289E860023287A /* IAdView.m in Sources */,
+				180F40CC192868500023287A /* HDRHomeHeadSearchBar.m in Sources */,
+				18640BAE19285A5100338066 /* HDRNearCtrl.m in Sources */,
+				18640B571928560D00338066 /* main.m in Sources */,
+				18640B5B1928560D00338066 /* HDRAppDelegate.m in Sources */,
+				18640BB119285DCC00338066 /* HDRUserCtrl.m in Sources */,
+				180F40D819288EF80023287A /* NSTimer+Addition.m in Sources */,
+				180F41171928A1BF0023287A /* HDRHomeAtentionView.m in Sources */,
+				180F40DB19288F250023287A /* HDRHomeAdsView.m in Sources */,
+				180F40C9192866AA0023287A /* HDRHomeHeadSearchCtrl.m in Sources */,
+				18640BAB1928585000338066 /* HDRHomeRootCtrl.m in Sources */,
+				18640BB419285DDC00338066 /* HDRMoreCtrl.m in Sources */,
+				180F40CF19286D630023287A /* HDRHomeNewsBar.m in Sources */,
+				180F411319289E860023287A /* IAdObj.m in Sources */,
+				180F411E1928A75C0023287A /* HDRHomeAtentionCell.m in Sources */,
+				180F40D719288EF80023287A /* CycleScrollView.m in Sources */,
+				18640BA51928578E00338066 /* HDRRootCtrl.m in Sources */,
+				180F40D219286EAB0023287A /* HDRHomeFunsBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18640B5E1928560D00338066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18640B701928560D00338066 /* hdrdemo5Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18640B681928560D00338066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18640B461928560D00338066 /* hdrdemo5 */;
+			targetProxy = 18640B671928560D00338066 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18640B531928560D00338066 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18640B541928560D00338066 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18640B6C1928560D00338066 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18640B6D1928560D00338066 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18640B711928560D00338066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18640B721928560D00338066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18640B741928560D00338066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo5/hdrdemo5-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo5/hdrdemo5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		18640B751928560D00338066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo5/hdrdemo5-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo5/hdrdemo5-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		18640B771928560D00338066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hdrdemo5.app/hdrdemo5";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo5/hdrdemo5-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hdrdemo5Tests/hdrdemo5Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		18640B781928560D00338066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hdrdemo5.app/hdrdemo5";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hdrdemo5/hdrdemo5-Prefix.pch";
+				INFOPLIST_FILE = "hdrdemo5Tests/hdrdemo5Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18640B421928560D00338066 /* Build configuration list for PBXProject "hdrdemo5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18640B711928560D00338066 /* Debug */,
+				18640B721928560D00338066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18640B731928560D00338066 /* Build configuration list for PBXNativeTarget "hdrdemo5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18640B741928560D00338066 /* Debug */,
+				18640B751928560D00338066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18640B761928560D00338066 /* Build configuration list for PBXNativeTarget "hdrdemo5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18640B771928560D00338066 /* Debug */,
+				18640B781928560D00338066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18640B3F1928560D00338066 /* Project object */;
+}
