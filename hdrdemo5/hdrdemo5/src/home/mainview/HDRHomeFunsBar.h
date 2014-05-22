@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HDRHomeFunsDelegate
+
+@required
+
+- (void)showHospital;
+
+- (void)showDrug;
+
+- (void)showExam;
+
+- (void)showTool;
+
+@end
+
 @interface HDRHomeFunsBar : UIView
+
+
+@property (nonatomic, assign)id<HDRHomeFunsDelegate> delegate;
 
 @end

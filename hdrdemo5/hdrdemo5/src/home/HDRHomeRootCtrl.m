@@ -15,6 +15,11 @@
 #import "HDRHomeAtentionView.h"
 #import "HDRHomeAtentionCell.h"
 
+#import "HDRHospitalViewCtrl.h"
+#import "HDRDrugViewCtrl.h"
+#import "HDRExamViewCtrl.h"
+#import "HDRToolViewCtrl.h"
+
 @interface HDRHomeRootCtrl ()
 {
     HDRHomeAdsView * adsview;
@@ -39,11 +44,12 @@
     // Do any additional setup after loading the view.
     
     HDRHomeHeadSearchBar * headSearchBar = [[HDRHomeHeadSearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    
     [self.view addSubview:headSearchBar];
     
     HDRHomeHeadSearchCtrl * headSearchBarCtrl = [[HDRHomeHeadSearchCtrl alloc] initWithSearchBar:headSearchBar.searchbar contentsController:self];
     headSearchBarCtrl.delegate = self;
+    headSearchBarCtrl.searchResultsDelegate = self;
+    headSearchBarCtrl.searchResultsDataSource = self;
     
     HDRHomeNewsBar * newsbar = [[HDRHomeNewsBar alloc] initWithFrame:CGRectMake(0, 44, 320, 20)];
     [self.view addSubview:newsbar];
@@ -53,6 +59,8 @@
     
     HDRHomeFunsBar * funsbar = [[HDRHomeFunsBar alloc] initWithFrame:CGRectMake(0, 214, 320, 80)];
     [self.view addSubview:funsbar];
+    funsbar.delegate = self;
+   
     
     self.dataList = [NSMutableArray arrayWithObjects:@"男神",@"女神", nil];
     
@@ -60,6 +68,12 @@
     atentionview.dataSource = self;
     atentionview.delegate = self;
     [self.view addSubview:atentionview];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller
+shouldReloadTableForSearchString:(NSString *)searchString
+{
+    return YES;
 }
 
 /**
@@ -120,6 +134,28 @@
     
     cell.detailTextLabel.text = @"详细信息";
     return cell;
+}
+
+#pragma mark - HDRHomeFunsDelegate
+
+- (void)showHospital
+{
+    [self.navigationController pushViewController:[[HDRHospitalViewCtrl alloc] init] animated:YES];
+}
+
+- (void)showDrug
+{
+    [self.navigationController pushViewController:[[HDRDrugViewCtrl alloc] init] animated:YES];
+}
+
+- (void)showExam
+{
+    [self.navigationController pushViewController:[[HDRExamViewCtrl alloc] init] animated:YES];
+}
+
+- (void)showTool
+{
+    [self.navigationController pushViewController:[[HDRToolViewCtrl alloc] init] animated:YES];
 }
 
 /*

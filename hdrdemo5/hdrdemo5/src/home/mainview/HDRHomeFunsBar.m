@@ -49,23 +49,24 @@
 
 - (void)clickHospital:(id)sender
 {
-    
+    [self.delegate showHospital];
 }
 
 - (void)clickDrug:(id)sender
 {
-    
+    [self.delegate showDrug];
 }
 
 - (void)clickExam:(id)sender
 {
-    
+    [self.delegate showExam];
 }
 
 - (void)clickTool:(id)sender
 {
-    
+    [self.delegate showTool];
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HDRHomeFunsBar.h"
 
-@interface HDRHomeRootCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate>
+@interface HDRHomeRootCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, HDRHomeFunsDelegate>
 
 @property (nonatomic, strong) NSMutableArray * dataList;
 
