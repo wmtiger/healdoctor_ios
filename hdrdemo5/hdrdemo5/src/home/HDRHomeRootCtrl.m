@@ -15,7 +15,7 @@
 #import "HDRHomeAtentionView.h"
 #import "HDRHomeAtentionCell.h"
 
-#import "HDRHospitalViewCtrl.h"
+#import "HDRHospitalTableViewCtrl.h"
 #import "HDRDrugViewCtrl.h"
 #import "HDRExamViewCtrl.h"
 #import "HDRToolViewCtrl.h"
@@ -140,7 +140,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
 
 - (void)showHospital
 {
-    [self.navigationController pushViewController:[[HDRHospitalViewCtrl alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[HDRHospitalTableViewCtrl alloc] init] animated:YES];
 }
 
 - (void)showDrug

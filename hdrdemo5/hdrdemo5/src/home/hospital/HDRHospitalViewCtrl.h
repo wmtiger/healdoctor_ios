@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HDRHospitalViewCtrl : UIViewController
+@interface HDRHospitalViewCtrl : UIViewController<UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate>
+
+@property (nonatomic, strong)UISearchBar * searchbar;
+@property (nonatomic, strong)UISearchDisplayController * searchctrl;
 
 @end

@@ -24,6 +24,7 @@
 		180F411A1928A6220023287A /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F41181928A6220023287A /* blue.png */; };
 		180F411B1928A6220023287A /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 180F41191928A6220023287A /* green.png */; };
 		180F411E1928A75C0023287A /* HDRHomeAtentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */; };
+		182A27A819309534001F93E6 /* HDRHospitalTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A27A719309534001F93E6 /* HDRHospitalTableViewCtrl.m */; };
 		18640B4B1928560D00338066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4A1928560D00338066 /* Foundation.framework */; };
 		18640B4D1928560D00338066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4C1928560D00338066 /* CoreGraphics.framework */; };
 		18640B4F1928560D00338066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18640B4E1928560D00338066 /* UIKit.framework */; };
@@ -87,6 +88,8 @@
 		180F41191928A6220023287A /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		180F411C1928A75C0023287A /* HDRHomeAtentionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHomeAtentionCell.h; sourceTree = "<group>"; };
 		180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHomeAtentionCell.m; sourceTree = "<group>"; };
+		182A27A619309534001F93E6 /* HDRHospitalTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalTableViewCtrl.h; sourceTree = "<group>"; };
+		182A27A719309534001F93E6 /* HDRHospitalTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalTableViewCtrl.m; sourceTree = "<group>"; };
 		18640B471928560D00338066 /* hdrdemo5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hdrdemo5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18640B4A1928560D00338066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18640B4C1928560D00338066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -245,6 +248,8 @@
 			children = (
 				A3FC1783192E344D0050263A /* HDRHospitalViewCtrl.h */,
 				A3FC1784192E344D0050263A /* HDRHospitalViewCtrl.m */,
+				182A27A619309534001F93E6 /* HDRHospitalTableViewCtrl.h */,
+				182A27A719309534001F93E6 /* HDRHospitalTableViewCtrl.m */,
 			);
 			path = hospital;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				180F40CC192868500023287A /* HDRHomeHeadSearchBar.m in Sources */,
 				A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */,
 				18640BAE19285A5100338066 /* HDRNearCtrl.m in Sources */,
+				182A27A819309534001F93E6 /* HDRHospitalTableViewCtrl.m in Sources */,
 				18640B571928560D00338066 /* main.m in Sources */,
 				18640B5B1928560D00338066 /* HDRAppDelegate.m in Sources */,
 				18640BB119285DCC00338066 /* HDRUserCtrl.m in Sources */,
