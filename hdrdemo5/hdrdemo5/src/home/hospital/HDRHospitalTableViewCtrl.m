@@ -33,27 +33,53 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-//    self.searchbar
-    for (UIView * subview in self.searchbar.subviews) {
-        if ([subview isKindOfClass:NSClassFromString(@"UITextField")]) {
-            CGRect f = subview.frame;
-            subview.frame = CGRectMake(f.origin.x+60, f.origin.y, f.size.width-60, f.size.height);
-            NSLog(@"hah");
+    _searchbar = [[UISearchBar alloc]initWithFrame:CGRectMake(60, 0, 260, 44)];
+    [self.navigationController.navigationBar addSubview:_searchbar];
+    _searchbar.delegate = self;
+    
+//    _headBar = [[HDRHospitalHeadBar alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+//    self.tableView.tableHeaderView = _headBar;
+//    _headBar.delegate = self;
+//    [self.navigationController.navigationBar addSubview:_headBar];
+    
+    _segView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.tableView.tableHeaderView = _segView;
+    _segView.backgroundColor = [UIColor blueColor];
+    
+    _segCtrl = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"医院", @"药店", @"药品", nil]];
+    _segCtrl.frame = CGRectMake(30, 6, 260, 32);
+    _segCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
+    [_segView addSubview:_segCtrl];
+    _segCtrl.selectedSegmentIndex = 0;
+    [_segCtrl addTarget:self action:@selector(changeSegment:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void)setSegCtrlData:(NSInteger)idx
+{
+    switch (idx) {
+        case 0:
+            // 读取医院数据
+            _crtSelectData = _hospitalData;
             break;
-        }
+        case 1:
+            // 读取药店数据
+            _crtSelectData = _drugStoreData;
+            break;
+        case 2:
+            // 读取药品数据
+            _crtSelectData = _drugData;
+            break;
+            
+        default:
+            break;
     }
-    self.tableView.tableHeaderView = self.searchbar;
-    NSArray * titles = [[NSArray alloc]initWithObjects:@"医院", @"药店", @"药品", nil];
-    self.searchbar.scopeButtonTitles =titles;
-    self.searchbar.showsScopeBar = YES;
-    self.searchbar.delegate = self;
-    
-//    self.searchctrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchbar contentsController:self];
-//    self.searchctrl.delegate = self;
-//    self.searchctrl.searchResultsDelegate = self;
-//    self.searchctrl.searchResultsDataSource = self;
-    
+//    self.tableView.
+}
+
+-(void)changeSegment:(id)sender
+{
+    int idx = _segCtrl.selectedSegmentIndex;
+    NSLog(@"%d", idx);
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,54 +96,48 @@
     return YES;
 }
 
--(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
-{
-    
-    return YES;
-}
-
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {
     [self.searchbar setShowsCancelButton:NO animated:YES];
     [self.searchbar resignFirstResponder];
+    _searchbar.text = @"";
+    
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    
+    NSLog(@"txt change %@", searchText);
 }
 
 -(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
 {
-    
+    NSLog(@"select idx:%d", selectedScope);
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString * cellId = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

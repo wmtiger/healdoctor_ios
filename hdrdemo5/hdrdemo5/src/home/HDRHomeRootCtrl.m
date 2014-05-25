@@ -80,14 +80,14 @@ shouldReloadTableForSearchString:(NSString *)searchString
  *加以下俩方法可以实现nav的root不显示navbar，其他的view显示navbar
  */
 - (void)viewWillAppear:(BOOL)animated {
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     
     [adsview resumeScroll];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-//    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
     
     [adsview pauseScroll];
