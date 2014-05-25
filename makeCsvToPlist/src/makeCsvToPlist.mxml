@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+					   xmlns:s="library://ns.adobe.com/flex/spark"
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   width="640" height="480">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.utils.StringUtil;
+			
+			public var crtData:ArrayList;
+			public var crtColData:ArrayList;
+			
+			protected function loadCSV_clickHandler(event:MouseEvent):void
+			{
+				var txtFilter:FileFilter = new FileFilter("Text", "*.txt;*.csv");
+				var fileToOpen:File = new File();
+				
+				try 
+				{
+					fileToOpen.browseForOpen("选择csv", [txtFilter]);
+					fileToOpen.addEventListener(Event.SELECT, fileSelected);
+				}
+				catch (error:Error)
+				{
+					trace("Failed:", error.message);
+				}
+				
+				function fileSelected(event:Event):void 
+				{
+					var stream:FileStream = new FileStream();
+					stream.openAsync(event.target as File, FileMode.READ);
+					stream.addEventListener(Event.COMPLETE, onOpenStream);
+					
+					loadFileName.text = fileToOpen.name;
+				}
+				
+				
+			}
+			
+			protected function onOpenStream(event:Event):void
+			{
+				var stream:FileStream = event.target as FileStream;
+				stream.removeEventListener(Event.COMPLETE, onOpenStream);
+				var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
+				fileData = StringUtil.restrict(fileData, "^\"");
+				var temp:Array;
+				if(fileData.indexOf("\r\n"))
+				{
+					temp = fileData.split("\r\n");
+				}
+				else
+				{
+					temp = fileData.split("\n");
+				}
+				trace(temp.length);
+				var len:int = temp.length;
+				var arrayList:Array = [];
+				for(var i:int = 0; i < len; i++)
+				{
+					var cell:Array = (temp[i] as String).split(",");
+					var obj:Object = {};
+					obj.name = cell[0];
+					obj.price = cell[1];
+					obj.isChufang = cell[2];
+					obj.drugType = cell[3];
+					obj.hasYibao = cell[4];
+					
+//					obj.state = cell[1];
+//					obj.city = cell[2];
+//					obj.address = cell[3];
+//					obj.level = cell[4];
+//					obj.feature = cell[5];
+//					obj.isYibao = cell[6];
+					
+					arrayList.push(obj);
+				}
+				crtData = new ArrayList(arrayList);
+//				var cols:Array = [];
+//				crtColData = new ArrayList();
+//				dataGrid.columns = crtColData;
+				dataGrid.dataProvider = crtData;
+				
+			}
+			
+			protected function outputJSON_clickHandler(event:MouseEvent):void
+			{
+				var str:String = loadFileName.text + "";
+				var temp:Array = str.split(".");
+				createJsonFile(temp[0] + "");
+			}
+			
+			protected function createJsonFile(fileName:String):void
+			{
+				if(fileName == "")
+					return;
+				var fn:String = fileName + ".json";
+				var arr:Array = crtData.source;
+				var str:String = JSON.stringify(arr);
+				var file:File = File.desktopDirectory.resolvePath(fn);
+				var fs:FileStream = new FileStream();
+				try
+				{
+					fs.open(file, FileMode.WRITE);
+					fs.writeUTFBytes(str);
+				}
+				catch(e:Error)
+				{
+					
+				}
+				fs.close();
+				Alert.show("导出 "+fn+" 完成","提示");
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Button id="loadCSV" x="10" y="10" label="载入CSV" click="loadCSV_clickHandler(event)"/>
+	<s:Button id="outputJSON" x="198" y="10" label="导出JSON" click="outputJSON_clickHandler(event)"/>
+	<s:DataGrid id="dataGrid" left="10" right="10" top="40" bottom="10" requestedRowCount="4">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="name" headerText="名字"></s:GridColumn>
+				<s:GridColumn dataField="price" headerText="列 2"></s:GridColumn>
+				<s:GridColumn dataField="isChufang" headerText="列 3"></s:GridColumn>
+				<s:GridColumn dataField="drugType" headerText="列 3"></s:GridColumn>
+				<s:GridColumn dataField="hasYibao" headerText="列 3"></s:GridColumn>
+			</s:ArrayList>
+		</s:columns>
+		<s:typicalItem>
+			<fx:Object dataField1="示例数据" dataField2="示例数据" dataField3="示例数据"></fx:Object>
+		</s:typicalItem>
+		<s:ArrayList>
+			<fx:Object dataField1="数据1" dataField2="数据1" dataField3="数据1"></fx:Object>
+			<fx:Object dataField1="数据2" dataField2="数据2" dataField3="数据2"></fx:Object>
+			<fx:Object dataField1="数据3" dataField2="数据3" dataField3="数据3"></fx:Object>
+			<fx:Object dataField1="数据4" dataField2="数据4" dataField3="数据4"></fx:Object>
+		</s:ArrayList>
+	</s:DataGrid>
+	<s:Label id="loadFileName" x="88" y="10" width="102" height="22" fontSize="14" textAlign="left"
+			 verticalAlign="middle"/>
+</s:WindowedApplication>
