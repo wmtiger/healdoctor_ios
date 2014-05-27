@@ -88,22 +88,23 @@
 			{
 				var str:String = loadFileName.text + "";
 				var temp:Array = str.split(".");
-				createJsonFile(temp[0] + "");
+				var arr:Array = crtData.source;
+				var str2:String = JSON.stringify(arr);
+				createJsonFile(str2, temp[0] + "");
 			}
 			
-			protected function createJsonFile(fileName:String):void
+			protected function createJsonFile(data:String, fileName:String):void
 			{
 				if(fileName == "")
 					return;
 				var fn:String = fileName + ".json";
-				var arr:Array = crtData.source;
-				var str:String = JSON.stringify(arr);
+				
 				var file:File = File.desktopDirectory.resolvePath(fn);
 				var fs:FileStream = new FileStream();
 				try
 				{
 					fs.open(file, FileMode.WRITE);
-					fs.writeUTFBytes(str);
+					fs.writeUTFBytes(data);
 				}
 				catch(e:Error)
 				{
@@ -176,6 +177,45 @@
 				Alert.show("导出 "+fn+" 完成","提示");
 			}
 			
+			protected function getAllpy_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				var fileToOpen:File = File.desktopDirectory.resolvePath("pyall.txt");
+				
+				var stream:FileStream = new FileStream();
+				stream.openAsync(fileToOpen, FileMode.READ);
+				stream.addEventListener(Event.COMPLETE, onOpenStream2);
+				
+				function onOpenStream2(event:Event):void
+				{
+					// TODO Auto-generated method stub
+					stream.removeEventListener(Event.COMPLETE, onOpenStream2);
+					var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
+					var arr:Array = fileData.split("\n");
+					var len:int = arr.length;
+					trace(len, arr[0]);
+					var list:Array = [];
+					for(var i:int = 0; i < len; i++)
+					{
+						var obj:Object = {};
+						var str:String = arr[i];
+						var strLen:int = str.length;
+						for(var j:int = 0; j < strLen; j++)
+						{
+							if(PYConvert.isChinese2(str.charAt(j)))
+							{
+								obj.py = str.substr(0, j);
+								obj.hz = str.substr(j);
+								break;
+							}
+						}
+						list.push(obj);
+					}
+					var jsonStr:String = JSON.stringify(list);
+					createJsonFile(jsonStr, "pyall");
+				}
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -207,4 +247,5 @@
 	<s:Label id="loadFileName" x="88" y="10" width="102" height="22" fontSize="14" textAlign="left"
 			 verticalAlign="middle"/>
 	<s:Button id="exportNamePY" x="285" y="10" label="重新导出JSON" click="exportNamePY_clickHandler(event)"/>
+	<s:Button id="getAllpy" x="394" y="11" label="获取拼音大全" click="getAllpy_clickHandler(event)"/>
 </s:WindowedApplication>
