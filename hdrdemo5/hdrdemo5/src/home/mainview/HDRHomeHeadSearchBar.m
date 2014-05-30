@@ -7,6 +7,7 @@
 //
 
 #import "HDRHomeHeadSearchBar.h"
+#import "HDRGlobalData.h"
 
 @implementation HDRHomeHeadSearchBar
 
@@ -56,6 +57,7 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;
 {
+    [HDRGlobalData instance];
     [self.searchbar setShowsCancelButton:YES animated:YES];
 }
 

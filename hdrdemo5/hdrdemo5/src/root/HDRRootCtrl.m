@@ -42,13 +42,28 @@
     
     HDRMoreCtrl * morevc = [[HDRMoreCtrl alloc] init];
     
-    homevc.title = @"首页";
-    nearvc.title = @"附近";
-    uservc.title = @"用户";
-    morevc.title = @"更多";
+//    homevc.title = @"首页";
+//    nearvc.title = @"附近";
+//    uservc.title = @"用户";
+//    morevc.title = @"更多";
     
     NSArray * ctrls = [[NSArray alloc] initWithObjects:homevc, nearvc, uservc, morevc, nil];
     self.viewControllers = ctrls;
+    
+    UITabBarItem * item0 = (UITabBarItem *)[self.tabBar.items objectAtIndex:0];
+    item0.image = [UIImage imageNamed:@"icon_home"];
+    
+    UITabBarItem * item1 = (UITabBarItem *)[self.tabBar.items objectAtIndex:1];
+    item1.image = [UIImage imageNamed:@"icon_near"];
+    
+    UITabBarItem * item2 = (UITabBarItem *)[self.tabBar.items objectAtIndex:2];
+    item2.image = [UIImage imageNamed:@"icon_user"];
+    
+    UITabBarItem * item3 = (UITabBarItem *)[self.tabBar.items objectAtIndex:3];
+    item3.image = [UIImage imageNamed:@"icon_setting"];
+    
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"bg_tabbar"];
+    //    self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
 }
 
 - (void)didReceiveMemoryWarning

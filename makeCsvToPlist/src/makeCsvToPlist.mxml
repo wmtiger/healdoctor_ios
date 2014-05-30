@@ -12,9 +12,86 @@
 			public var crtData:ArrayList;
 			public var crtColData:ArrayList;
 			
+			private function setCSV_toJSON(csvFile:File, jiexiFun:Function):void
+			{
+				var fileToOpen:File = csvFile;
+				var stream:FileStream = new FileStream();
+				stream.openAsync(fileToOpen, FileMode.READ);
+				stream.addEventListener(Event.COMPLETE, onOpenStream2);
+				
+				function onOpenStream2(event:Event):void
+				{
+					var stream:FileStream = event.target as FileStream;
+					stream.removeEventListener(Event.COMPLETE, onOpenStream2);
+					var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
+					fileData = StringUtil.restrict(fileData, "^\"");
+					var temp:Array;
+					if(fileData.indexOf("\r\n"))
+					{
+						temp = fileData.split("\r\n");
+					}
+					else
+					{
+						temp = fileData.split("\n");
+					}
+					trace(temp.length);
+					var len:int = temp.length;
+					var arrayList:Array = jiexiFun(temp);
+					
+					crtData = new ArrayList(arrayList);
+					dataGrid.dataProvider = crtData;
+					
+					var str2:String = JSON.stringify(arrayList);
+					var fn:String = fileToOpen.name.split(".")[0];
+					createJsonFile(str2, fn);
+				}
+			}
+			
+			private function jiexiDrugCSV(temp:Array):Array 
+			{
+				var len:int = temp.length;
+				var arrayList:Array = [];
+				for(var i:int = 0; i < len; i++)
+				{
+					var cell:Array = (temp[i] as String).split(",");
+					var obj:Object = {};
+					obj.name = cell[0];
+					obj.price = cell[1];
+					obj.isChufang = cell[2];
+					obj.drugType = cell[3];
+					obj.hasYibao = cell[4];
+					obj.py = PYConvert2.convertString(obj.name);
+					
+					arrayList.push(obj);
+				}
+				return arrayList;
+			}
+			
+			private function jiexiHospitalCSV(temp:Array):Array 
+			{
+				var len:int = temp.length;
+				var arrayList:Array = [];
+				for(var i:int = 0; i < len; i++)
+				{
+					var cell:Array = (temp[i] as String).split(",");
+					var obj:Object = {};
+					obj.name = cell[0];
+					obj.state = cell[1];
+					obj.city = cell[2];
+					obj.address = cell[3];
+					obj.level = cell[4];
+					obj.feature = cell[5];
+					obj.isYibao = cell[6];
+					obj.py = PYConvert2.convertString(obj.name);
+					
+					arrayList.push(obj);
+				}
+				return arrayList;
+			}
+			
 			protected function loadCSV_clickHandler(event:MouseEvent):void
 			{
-				var txtFilter:FileFilter = new FileFilter("Text", "*.txt;*.csv");
+				var txtFilter:FileFilter = new FileFilter("Text", "*.csv");
 				var fileToOpen:File = new File();
 				
 				try 
@@ -29,69 +106,18 @@
 				
 				function fileSelected(event:Event):void 
 				{
-					var stream:FileStream = new FileStream();
-					stream.openAsync(event.target as File, FileMode.READ);
-					stream.addEventListener(Event.COMPLETE, onOpenStream);
-					
-					loadFileName.text = fileToOpen.name;
+					if(fileToOpen.name.indexOf("drug"))
+					{
+						setCSV_toJSON(fileToOpen, jiexiDrugCSV);
+					}
+					else if(fileToOpen.name.indexOf("hospital"))
+					{
+						setCSV_toJSON(fileToOpen, jiexiHospitalCSV);
+					}
 				}
-				
 				
 			}
 			
-			protected function onOpenStream(event:Event):void
-			{
-				var stream:FileStream = event.target as FileStream;
-				stream.removeEventListener(Event.COMPLETE, onOpenStream);
-				var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
-				fileData = StringUtil.restrict(fileData, "^\"");
-				var temp:Array;
-				if(fileData.indexOf("\r\n"))
-				{
-					temp = fileData.split("\r\n");
-				}
-				else
-				{
-					temp = fileData.split("\n");
-				}
-				trace(temp.length);
-				var len:int = temp.length;
-				var arrayList:Array = [];
-				for(var i:int = 0; i < len; i++)
-				{
-					var cell:Array = (temp[i] as String).split(",");
-					var obj:Object = {};
-					obj.name = cell[0];
-					obj.price = cell[1];
-					obj.isChufang = cell[2];
-					obj.drugType = cell[3];
-					obj.hasYibao = cell[4];
-					
-//					obj.state = cell[1];
-//					obj.city = cell[2];
-//					obj.address = cell[3];
-//					obj.level = cell[4];
-//					obj.feature = cell[5];
-//					obj.isYibao = cell[6];
-					
-					arrayList.push(obj);
-				}
-				crtData = new ArrayList(arrayList);
-//				var cols:Array = [];
-//				crtColData = new ArrayList();
-//				dataGrid.columns = crtColData;
-				dataGrid.dataProvider = crtData;
-				
-			}
-			
-			protected function outputJSON_clickHandler(event:MouseEvent):void
-			{
-				var str:String = loadFileName.text + "";
-				var temp:Array = str.split(".");
-				var arr:Array = crtData.source;
-				var str2:String = JSON.stringify(arr);
-				createJsonFile(str2, temp[0] + "");
-			}
 			
 			protected function createJsonFile(data:String, fileName:String):void
 			{
@@ -155,7 +181,7 @@
 						continue;
 					}
 					var name:String = obj.name;
-					var py:String = PYConvert.convertString(name);
+					var py:String = PYConvert2.convertString(name);
 					obj.py = py;
 				}
 				var str:String = JSON.stringify(arr);
@@ -216,14 +242,19 @@
 				}
 			}
 			
+			protected function outputJSON_clickHandler(event:MouseEvent):void
+			{
+				
+			}
+			
 		]]>
 	</fx:Script>
 	
 	<fx:Declarations>
 		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
 	</fx:Declarations>
-	<s:Button id="loadCSV" x="10" y="10" label="载入CSV" click="loadCSV_clickHandler(event)"/>
-	<s:Button id="outputJSON" x="198" y="10" label="导出JSON" click="outputJSON_clickHandler(event)"/>
+	<s:Button id="loadCSV" x="10" y="10" label="载入CSV导出JSON" click="loadCSV_clickHandler(event)"/>
+	<s:Button id="outputJSON" x="145" y="10" label="导出DrugJSON" click="outputJSON_clickHandler(event)"/>
 	<s:DataGrid id="dataGrid" left="10" right="10" top="40" bottom="10" requestedRowCount="4">
 		<s:columns>
 			<s:ArrayList>
@@ -244,8 +275,6 @@
 			<fx:Object dataField1="数据4" dataField2="数据4" dataField3="数据4"></fx:Object>
 		</s:ArrayList>
 	</s:DataGrid>
-	<s:Label id="loadFileName" x="88" y="10" width="102" height="22" fontSize="14" textAlign="left"
-			 verticalAlign="middle"/>
-	<s:Button id="exportNamePY" x="285" y="10" label="重新导出JSON" click="exportNamePY_clickHandler(event)"/>
-	<s:Button id="getAllpy" x="394" y="11" label="获取拼音大全" click="getAllpy_clickHandler(event)"/>
+	<s:Button id="exportNamePY" x="258" y="10" label="导出HospitalJSON" click="exportNamePY_clickHandler(event)"/>
+	<s:Button id="getAllpy" x="537" y="11" label="获取拼音大全" click="getAllpy_clickHandler(event)"/>
 </s:WindowedApplication>

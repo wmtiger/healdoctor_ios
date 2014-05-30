@@ -7,6 +7,7 @@
 //
 
 #import "HDRHospitalTableViewCtrl.h"
+#import "HDRGlobalData.h"
 
 @interface HDRHospitalTableViewCtrl ()
 
@@ -59,27 +60,28 @@
     switch (idx) {
         case 0:
             // 读取医院数据
-            _crtSelectData = _hospitalData;
+            _crtSelectData = [HDRGlobalData instance].hospitalData;
             break;
         case 1:
             // 读取药店数据
-            _crtSelectData = _drugStoreData;
+            _crtSelectData = [HDRGlobalData instance].drugStoreData;
             break;
         case 2:
             // 读取药品数据
-            _crtSelectData = _drugData;
+            _crtSelectData = [HDRGlobalData instance].drugData;
             break;
             
         default:
             break;
     }
-//    self.tableView.
+    [self.tableView reloadData];
 }
 
 -(void)changeSegment:(id)sender
 {
     int idx = _segCtrl.selectedSegmentIndex;
     NSLog(@"%d", idx);
+    [self setSegCtrlData:idx];
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,22 +121,29 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+    NSLog(@"aaa");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"bbb %d", [_crtSelectData count]);
+    return [_crtSelectData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * cellId = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    static NSString *cellId = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
     
     // Configure the cell...
-    
+    NSDictionary * dict = [_crtSelectData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dict objectForKey:@"name"];
+    NSLog(@"ccc %@", [dict objectForKey:@"name"]);
     return cell;
 }
 

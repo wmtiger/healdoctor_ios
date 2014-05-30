@@ -44,6 +44,14 @@
 		18640BAE19285A5100338066 /* HDRNearCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BAD19285A5100338066 /* HDRNearCtrl.m */; };
 		18640BB119285DCC00338066 /* HDRUserCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BB019285DCC00338066 /* HDRUserCtrl.m */; };
 		18640BB419285DDC00338066 /* HDRMoreCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18640BB319285DDC00338066 /* HDRMoreCtrl.m */; };
+		A306C6C41938C56C0038DB43 /* bg_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A306C6BF1938C56C0038DB43 /* bg_tabbar.png */; };
+		A306C6C51938C56C0038DB43 /* icon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = A306C6C01938C56C0038DB43 /* icon_home.png */; };
+		A306C6C61938C56C0038DB43 /* icon_near.png in Resources */ = {isa = PBXBuildFile; fileRef = A306C6C11938C56C0038DB43 /* icon_near.png */; };
+		A306C6C71938C56C0038DB43 /* icon_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = A306C6C21938C56C0038DB43 /* icon_setting.png */; };
+		A306C6C81938C56C0038DB43 /* icon_user.png in Resources */ = {isa = PBXBuildFile; fileRef = A306C6C31938C56C0038DB43 /* icon_user.png */; };
+		A306C6CC1938CC9A0038DB43 /* HDRGlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = A306C6CB1938CC9A0038DB43 /* HDRGlobalData.m */; };
+		A306C6D01938CF800038DB43 /* drug.json in Resources */ = {isa = PBXBuildFile; fileRef = A306C6CE1938CF800038DB43 /* drug.json */; };
+		A306C6D11938CF800038DB43 /* hospital.json in Resources */ = {isa = PBXBuildFile; fileRef = A306C6CF1938CF800038DB43 /* hospital.json */; };
 		A3FC1788192E3A980050263A /* HDRExamViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */; };
 		A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC178D192E3AE20050263A /* HDRToolViewCtrl.m */; };
 		A3FC1791192E3B0E0050263A /* HDRDrugViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1790192E3B0E0050263A /* HDRDrugViewCtrl.m */; };
@@ -120,6 +128,15 @@
 		18640BB019285DCC00338066 /* HDRUserCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRUserCtrl.m; sourceTree = "<group>"; };
 		18640BB219285DDC00338066 /* HDRMoreCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRMoreCtrl.h; sourceTree = "<group>"; };
 		18640BB319285DDC00338066 /* HDRMoreCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRMoreCtrl.m; sourceTree = "<group>"; };
+		A306C6BF1938C56C0038DB43 /* bg_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_tabbar.png; sourceTree = "<group>"; };
+		A306C6C01938C56C0038DB43 /* icon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_home.png; sourceTree = "<group>"; };
+		A306C6C11938C56C0038DB43 /* icon_near.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_near.png; sourceTree = "<group>"; };
+		A306C6C21938C56C0038DB43 /* icon_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_setting.png; sourceTree = "<group>"; };
+		A306C6C31938C56C0038DB43 /* icon_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user.png; sourceTree = "<group>"; };
+		A306C6CA1938CC9A0038DB43 /* HDRGlobalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRGlobalData.h; path = global/HDRGlobalData.h; sourceTree = "<group>"; };
+		A306C6CB1938CC9A0038DB43 /* HDRGlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRGlobalData.m; path = global/HDRGlobalData.m; sourceTree = "<group>"; };
+		A306C6CE1938CF800038DB43 /* drug.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = drug.json; path = data/drug.json; sourceTree = "<group>"; };
+		A306C6CF1938CF800038DB43 /* hospital.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hospital.json; path = data/hospital.json; sourceTree = "<group>"; };
 		A3FC1786192E3A980050263A /* HDRExamViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRExamViewCtrl.h; sourceTree = "<group>"; };
 		A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRExamViewCtrl.m; sourceTree = "<group>"; };
 		A3FC178C192E3AE20050263A /* HDRToolViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRToolViewCtrl.h; sourceTree = "<group>"; };
@@ -155,6 +172,7 @@
 		180F40BE192864980023287A /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				A306C6CD1938CF760038DB43 /* data */,
 				180F410B192898A30023287A /* images */,
 				180F410D192898A30023287A /* images@2x */,
 				180F40BF192864980023287A /* launchimages */,
@@ -211,6 +229,11 @@
 		180F410B192898A30023287A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A306C6BF1938C56C0038DB43 /* bg_tabbar.png */,
+				A306C6C01938C56C0038DB43 /* icon_home.png */,
+				A306C6C11938C56C0038DB43 /* icon_near.png */,
+				A306C6C21938C56C0038DB43 /* icon_setting.png */,
+				A306C6C31938C56C0038DB43 /* icon_user.png */,
 				180F41181928A6220023287A /* blue.png */,
 				180F41191928A6220023287A /* green.png */,
 				180F410C192898A30023287A /* adholder.png */,
@@ -339,6 +362,7 @@
 		18640B9C1928577900338066 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A306C6C91938CB500038DB43 /* global */,
 				18640B9D1928577900338066 /* comps */,
 				18640B9E1928577900338066 /* home */,
 				18640B9F1928577900338066 /* more */,
@@ -406,6 +430,24 @@
 				18640BB019285DCC00338066 /* HDRUserCtrl.m */,
 			);
 			path = user;
+			sourceTree = "<group>";
+		};
+		A306C6C91938CB500038DB43 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				A306C6CA1938CC9A0038DB43 /* HDRGlobalData.h */,
+				A306C6CB1938CC9A0038DB43 /* HDRGlobalData.m */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
+		A306C6CD1938CF760038DB43 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A306C6CE1938CF800038DB43 /* drug.json */,
+				A306C6CF1938CF800038DB43 /* hospital.json */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,13 +527,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				18640B551928560D00338066 /* InfoPlist.strings in Resources */,
+				A306C6C71938C56C0038DB43 /* icon_setting.png in Resources */,
+				A306C6C81938C56C0038DB43 /* icon_user.png in Resources */,
+				A306C6D01938CF800038DB43 /* drug.json in Resources */,
 				18640B5D1928560D00338066 /* Images.xcassets in Resources */,
 				180F40C5192864980023287A /* Default@2x.png in Resources */,
 				180F40C3192864980023287A /* Default-568h@2x.png in Resources */,
 				180F410E192898A30023287A /* adholder.png in Resources */,
+				A306C6D11938CF800038DB43 /* hospital.json in Resources */,
 				180F411B1928A6220023287A /* green.png in Resources */,
 				180F411A1928A6220023287A /* blue.png in Resources */,
+				A306C6C61938C56C0038DB43 /* icon_near.png in Resources */,
+				A306C6C51938C56C0038DB43 /* icon_home.png in Resources */,
 				180F40C4192864980023287A /* Default.png in Resources */,
+				A306C6C41938C56C0038DB43 /* bg_tabbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +577,7 @@
 				18640BAB1928585000338066 /* HDRHomeRootCtrl.m in Sources */,
 				18640BB419285DDC00338066 /* HDRMoreCtrl.m in Sources */,
 				180F40CF19286D630023287A /* HDRHomeNewsBar.m in Sources */,
+				A306C6CC1938CC9A0038DB43 /* HDRGlobalData.m in Sources */,
 				180F411319289E860023287A /* IAdObj.m in Sources */,
 				180F411E1928A75C0023287A /* HDRHomeAtentionCell.m in Sources */,
 				A3FC1791192E3B0E0050263A /* HDRDrugViewCtrl.m in Sources */,
