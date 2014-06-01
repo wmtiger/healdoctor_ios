@@ -8,6 +8,10 @@
 
 #import "HDRHospitalTableViewCtrl.h"
 #import "HDRGlobalData.h"
+#import "HDRHospitalInfoViewCtrl.h"
+#import "HDRHospitalCell.h"
+#import "HDRDrugStoreCell.h"
+#import "HDRDrugCell.h"
 
 @interface HDRHospitalTableViewCtrl ()
 
@@ -34,13 +38,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //    _headBar = [[HDRHospitalHeadBar alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
-//    self.tableView.tableHeaderView = _headBar;
-//    _headBar.delegate = self;
-//    [self.navigationController.navigationBar addSubview:_headBar];
-    
-    
-//    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0 green:173 blue:231 alpha:1];// 0089e7
     UIView * subv = (UIView *)[[self.navigationController.navigationBar subviews] objectAtIndex:0];
     [subv removeFromSuperview];
     UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
@@ -76,14 +73,13 @@
     [_segView addSubview:_segCtrl];
     _segCtrl.selectedSegmentIndex = 0;
     [_segCtrl addTarget:self action:@selector(changeSegment:) forControlEvents:UIControlEventValueChanged];
+//    [_segCtrl setAlpha:0];
     
-//    [self.tableView setFrame:CGRectMake(0, 0, 320, 480-_segView.frame.size.height-_segCtrl.frame.size.height)];
 }
 
 - (void) clickBackBtn:(id)sender
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    
 }
 
 -(void)dealloc
@@ -99,6 +95,18 @@
     [self.navigationController.navigationBar addSubview:_searchbar];
     _searchbar.delegate = self;
     
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [_searchbar setHidden:NO];
+    [super viewWillAppear:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [_searchbar setHidden:YES];
+    [super viewWillDisappear:animated];
 }
 
 -(void)setSegCtrlData:(NSInteger)idx
@@ -186,19 +194,53 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
-    
-    // Configure the cell...
+    NSInteger cellType = _segCtrl.selectedSegmentIndex;
+    UITableViewCell * cell;
     NSDictionary * dict = [_crtSelectData objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dict objectForKey:@"name"];
-//    NSLog(@"ccc %@", [dict objectForKey:@"name"]);
+    
+    if (cellType == 0) {
+        cell = [HDRHospitalCell cellWithTabelView:tableView withData:dict];
+    }
+    else if (cellType == 1)
+    {
+        cell = [HDRDrugStoreCell cellWithTabelView:tableView withData:dict];
+    }
+    else
+    {
+        cell = [HDRDrugCell cellWithTabelView:tableView withData:dict];
+    }
+    // Configure the cell...
+    
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary * dict = [_crtSelectData objectAtIndex:indexPath.row];
+    NSString *titileString = [dict objectForKey:@"name"];
+    
+    HDRHospitalInfoViewCtrl * info = [[HDRHospitalInfoViewCtrl alloc] init];
+    [info setInfoData:titileString];
+    [self.navigationController pushViewController:info animated:YES];
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger cellType = _segCtrl.selectedSegmentIndex;
+    if (cellType == 0) {
+        return 64;
+    }
+    else if (cellType == 1)
+    {
+        return 64;
+    }
+    else
+    {
+        return 44;
+    }
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -68,6 +68,20 @@
 		A3FB0F93193B65B200C98679 /* bg_nanshen.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F91193B65B200C98679 /* bg_nanshen.png */; };
 		A3FB0F94193B65B200C98679 /* bg_nvshen.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F92193B65B200C98679 /* bg_nvshen.png */; };
 		A3FB0F97193B661A00C98679 /* HDRNvShenViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0F96193B661A00C98679 /* HDRNvShenViewCtrl.m */; };
+		A3FB0FA2193B780400C98679 /* bg_togood.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F98193B780400C98679 /* bg_togood.png */; };
+		A3FB0FA3193B780400C98679 /* btn_good.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F99193B780400C98679 /* btn_good.png */; };
+		A3FB0FA4193B780400C98679 /* btn_local.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9A193B780400C98679 /* btn_local.png */; };
+		A3FB0FA5193B780400C98679 /* btn_navto.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9B193B780400C98679 /* btn_navto.png */; };
+		A3FB0FA6193B780400C98679 /* icon_24time.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9C193B780400C98679 /* icon_24time.png */; };
+		A3FB0FA7193B780400C98679 /* icon_good.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9D193B780400C98679 /* icon_good.png */; };
+		A3FB0FA8193B780400C98679 /* icon_level.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9E193B780400C98679 /* icon_level.png */; };
+		A3FB0FA9193B780400C98679 /* icon_no24time.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F9F193B780400C98679 /* icon_no24time.png */; };
+		A3FB0FAA193B780400C98679 /* icon_yibao.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0FA0193B780400C98679 /* icon_yibao.png */; };
+		A3FB0FAB193B780400C98679 /* img_drug.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0FA1193B780400C98679 /* img_drug.png */; };
+		A3FB0FAE193B78AD00C98679 /* HDRHospitalInfoViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0FAD193B78AD00C98679 /* HDRHospitalInfoViewCtrl.m */; };
+		A3FB0FB1193B804400C98679 /* HDRHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0FB0193B804400C98679 /* HDRHospitalCell.m */; };
+		A3FB0FB4193B82C700C98679 /* HDRDrugStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0FB3193B82C700C98679 /* HDRDrugStoreCell.m */; };
+		A3FB0FB7193B8BA500C98679 /* HDRDrugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0FB6193B8BA500C98679 /* HDRDrugCell.m */; };
 		A3FC1788192E3A980050263A /* HDRExamViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */; };
 		A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC178D192E3AE20050263A /* HDRToolViewCtrl.m */; };
 		A3FC1791192E3B0E0050263A /* HDRDrugViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1790192E3B0E0050263A /* HDRDrugViewCtrl.m */; };
@@ -173,6 +187,24 @@
 		A3FB0F92193B65B200C98679 /* bg_nvshen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_nvshen.png; sourceTree = "<group>"; };
 		A3FB0F95193B661A00C98679 /* HDRNvShenViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRNvShenViewCtrl.h; sourceTree = "<group>"; };
 		A3FB0F96193B661A00C98679 /* HDRNvShenViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRNvShenViewCtrl.m; sourceTree = "<group>"; };
+		A3FB0F98193B780400C98679 /* bg_togood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_togood.png; sourceTree = "<group>"; };
+		A3FB0F99193B780400C98679 /* btn_good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_good.png; sourceTree = "<group>"; };
+		A3FB0F9A193B780400C98679 /* btn_local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_local.png; sourceTree = "<group>"; };
+		A3FB0F9B193B780400C98679 /* btn_navto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_navto.png; sourceTree = "<group>"; };
+		A3FB0F9C193B780400C98679 /* icon_24time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_24time.png; sourceTree = "<group>"; };
+		A3FB0F9D193B780400C98679 /* icon_good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_good.png; sourceTree = "<group>"; };
+		A3FB0F9E193B780400C98679 /* icon_level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_level.png; sourceTree = "<group>"; };
+		A3FB0F9F193B780400C98679 /* icon_no24time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_no24time.png; sourceTree = "<group>"; };
+		A3FB0FA0193B780400C98679 /* icon_yibao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_yibao.png; sourceTree = "<group>"; };
+		A3FB0FA1193B780400C98679 /* img_drug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_drug.png; sourceTree = "<group>"; };
+		A3FB0FAC193B78AD00C98679 /* HDRHospitalInfoViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalInfoViewCtrl.h; sourceTree = "<group>"; };
+		A3FB0FAD193B78AD00C98679 /* HDRHospitalInfoViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalInfoViewCtrl.m; sourceTree = "<group>"; };
+		A3FB0FAF193B804400C98679 /* HDRHospitalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRHospitalCell.h; sourceTree = "<group>"; };
+		A3FB0FB0193B804400C98679 /* HDRHospitalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRHospitalCell.m; sourceTree = "<group>"; };
+		A3FB0FB2193B82C700C98679 /* HDRDrugStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRDrugStoreCell.h; sourceTree = "<group>"; };
+		A3FB0FB3193B82C700C98679 /* HDRDrugStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRDrugStoreCell.m; sourceTree = "<group>"; };
+		A3FB0FB5193B8BA500C98679 /* HDRDrugCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRDrugCell.h; sourceTree = "<group>"; };
+		A3FB0FB6193B8BA500C98679 /* HDRDrugCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRDrugCell.m; sourceTree = "<group>"; };
 		A3FC1786192E3A980050263A /* HDRExamViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRExamViewCtrl.h; sourceTree = "<group>"; };
 		A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRExamViewCtrl.m; sourceTree = "<group>"; };
 		A3FC178C192E3AE20050263A /* HDRToolViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRToolViewCtrl.h; sourceTree = "<group>"; };
@@ -271,6 +303,16 @@
 		180F410B192898A30023287A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB0F98193B780400C98679 /* bg_togood.png */,
+				A3FB0F99193B780400C98679 /* btn_good.png */,
+				A3FB0F9A193B780400C98679 /* btn_local.png */,
+				A3FB0F9B193B780400C98679 /* btn_navto.png */,
+				A3FB0F9C193B780400C98679 /* icon_24time.png */,
+				A3FB0F9D193B780400C98679 /* icon_good.png */,
+				A3FB0F9E193B780400C98679 /* icon_level.png */,
+				A3FB0F9F193B780400C98679 /* icon_no24time.png */,
+				A3FB0FA0193B780400C98679 /* icon_yibao.png */,
+				A3FB0FA1193B780400C98679 /* img_drug.png */,
 				A3FB0F91193B65B200C98679 /* bg_nanshen.png */,
 				A3FB0F92193B65B200C98679 /* bg_nvshen.png */,
 				A3FB0F89193B4EFD00C98679 /* bg_backbtn.png */,
@@ -324,6 +366,14 @@
 				182A27A719309534001F93E6 /* HDRHospitalTableViewCtrl.m */,
 				1826322B193194950056141D /* HDRHospitalHeadBar.h */,
 				1826322C193194950056141D /* HDRHospitalHeadBar.m */,
+				A3FB0FAC193B78AD00C98679 /* HDRHospitalInfoViewCtrl.h */,
+				A3FB0FAD193B78AD00C98679 /* HDRHospitalInfoViewCtrl.m */,
+				A3FB0FAF193B804400C98679 /* HDRHospitalCell.h */,
+				A3FB0FB0193B804400C98679 /* HDRHospitalCell.m */,
+				A3FB0FB2193B82C700C98679 /* HDRDrugStoreCell.h */,
+				A3FB0FB3193B82C700C98679 /* HDRDrugStoreCell.m */,
+				A3FB0FB5193B8BA500C98679 /* HDRDrugCell.h */,
+				A3FB0FB6193B8BA500C98679 /* HDRDrugCell.m */,
 			);
 			path = hospital;
 			sourceTree = "<group>";
@@ -593,6 +643,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18640B551928560D00338066 /* InfoPlist.strings in Resources */,
+				A3FB0FA8193B780400C98679 /* icon_level.png in Resources */,
+				A3FB0FA9193B780400C98679 /* icon_no24time.png in Resources */,
 				A306C6C71938C56C0038DB43 /* icon_setting.png in Resources */,
 				A30A2962193A13A400ABEA45 /* bg_navbar.png in Resources */,
 				A306C6C81938C56C0038DB43 /* icon_user.png in Resources */,
@@ -605,18 +657,26 @@
 				180F40C3192864980023287A /* Default-568h@2x.png in Resources */,
 				A3FB0F94193B65B200C98679 /* bg_nvshen.png in Resources */,
 				180F410E192898A30023287A /* adholder.png in Resources */,
+				A3FB0FAB193B780400C98679 /* img_drug.png in Resources */,
 				A3FB0F93193B65B200C98679 /* bg_nanshen.png in Resources */,
 				A306C6D11938CF800038DB43 /* hospital.json in Resources */,
 				180F411B1928A6220023287A /* green.png in Resources */,
 				180F411A1928A6220023287A /* blue.png in Resources */,
 				A306C6C61938C56C0038DB43 /* icon_near.png in Resources */,
 				A306C6C51938C56C0038DB43 /* icon_home.png in Resources */,
+				A3FB0FA7193B780400C98679 /* icon_good.png in Resources */,
 				A30A2968193A1B0100ABEA45 /* bg_funsbar.png in Resources */,
 				A30A2964193A15B900ABEA45 /* bg_sp.png in Resources */,
+				A3FB0FA3193B780400C98679 /* btn_good.png in Resources */,
+				A3FB0FA4193B780400C98679 /* btn_local.png in Resources */,
 				180F40C4192864980023287A /* Default.png in Resources */,
+				A3FB0FA5193B780400C98679 /* btn_navto.png in Resources */,
+				A3FB0FA6193B780400C98679 /* icon_24time.png in Resources */,
 				A306C6C41938C56C0038DB43 /* bg_tabbar.png in Resources */,
 				A3FB0F7A193AD35E00C98679 /* bg_copyrightview.png in Resources */,
+				A3FB0FA2193B780400C98679 /* bg_togood.png in Resources */,
 				A3FB0F7B193AD35E00C98679 /* bg_userview.png in Resources */,
+				A3FB0FAA193B780400C98679 /* icon_yibao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,11 +701,15 @@
 				A3FB0F8D193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m in Sources */,
 				180F411419289E860023287A /* IAdView.m in Sources */,
 				180F40CC192868500023287A /* HDRHomeHeadSearchBar.m in Sources */,
+				A3FB0FB7193B8BA500C98679 /* HDRDrugCell.m in Sources */,
+				A3FB0FAE193B78AD00C98679 /* HDRHospitalInfoViewCtrl.m in Sources */,
 				A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */,
 				18640BAE19285A5100338066 /* HDRNearCtrl.m in Sources */,
 				182A27A819309534001F93E6 /* HDRHospitalTableViewCtrl.m in Sources */,
+				A3FB0FB4193B82C700C98679 /* HDRDrugStoreCell.m in Sources */,
 				18640B571928560D00338066 /* main.m in Sources */,
 				18640B5B1928560D00338066 /* HDRAppDelegate.m in Sources */,
+				A3FB0FB1193B804400C98679 /* HDRHospitalCell.m in Sources */,
 				18640BB119285DCC00338066 /* HDRUserCtrl.m in Sources */,
 				180F40D819288EF80023287A /* NSTimer+Addition.m in Sources */,
 				180F41171928A1BF0023287A /* HDRHomeAtentionView.m in Sources */,

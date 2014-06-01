@@ -8,6 +8,7 @@
 
 #import "HDRDrugViewCtrl.h"
 #import "HDRGlobalData.h"
+#import "HDRHospitalInfoViewCtrl.h"
 
 @interface HDRDrugViewCtrl ()
 
@@ -179,6 +180,17 @@
     cell.textLabel.text = [dict objectForKey:@"name"];
     NSLog(@"ccc %@", [dict objectForKey:@"name"]);
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary * dict = [_crtSelectData objectAtIndex:indexPath.row];
+    NSString *titileString = [dict objectForKey:@"name"];
+    
+    HDRHospitalInfoViewCtrl * info = [[HDRHospitalInfoViewCtrl alloc] init];
+    [info setInfoData:titileString];
+    [self.navigationController pushViewController:info animated:YES];
+    
 }
 
 /*
