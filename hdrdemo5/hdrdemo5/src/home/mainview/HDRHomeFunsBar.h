@@ -25,6 +25,6 @@
 @interface HDRHomeFunsBar : UIView
 
 
-@property (nonatomic, assign)id<HDRHomeFunsDelegate> delegate;
+@property (nonatomic, strong)id<HDRHomeFunsDelegate> delegate;
 
 @end

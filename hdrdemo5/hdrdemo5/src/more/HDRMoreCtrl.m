@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_copyrightview"]];
+    [self.view addSubview:bg];
+    
 }
 
 - (void)didReceiveMemoryWarning

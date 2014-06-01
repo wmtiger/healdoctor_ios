@@ -16,6 +16,9 @@
 
 @property (nonatomic, strong) NSMutableArray * drugStoreData;
 
+@property (nonatomic, strong) NSMutableArray * cityKeys;
+@property (nonatomic, strong) NSDictionary * cityDict;
+
 +(HDRGlobalData *)instance;
 
 //- (void)initDrugData;

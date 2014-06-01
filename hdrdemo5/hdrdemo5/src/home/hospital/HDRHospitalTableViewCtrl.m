@@ -34,25 +34,71 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _searchbar = [[UISearchBar alloc]initWithFrame:CGRectMake(60, 0, 260, 44)];
-    [self.navigationController.navigationBar addSubview:_searchbar];
-    _searchbar.delegate = self;
-    
-//    _headBar = [[HDRHospitalHeadBar alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+    //    _headBar = [[HDRHospitalHeadBar alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
 //    self.tableView.tableHeaderView = _headBar;
 //    _headBar.delegate = self;
 //    [self.navigationController.navigationBar addSubview:_headBar];
     
-    _segView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    
+//    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0 green:173 blue:231 alpha:1];// 0089e7
+    UIView * subv = (UIView *)[[self.navigationController.navigationBar subviews] objectAtIndex:0];
+    [subv removeFromSuperview];
+    UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
+    bg.frame = CGRectMake(0, 0, 320, 44);
+    [self.navigationController.navigationBar addSubview:bg];
+
+    UIImageView * btnbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_backbtn"]];
+    btnbg.frame = CGRectMake(10, 0, 53, 44);
+    [self.navigationController.navigationBar addSubview:btnbg];
+    
+    UIButton * backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 53, 44)];
+    backBtn.backgroundColor = [UIColor clearColor];
+    [backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+     
+//    [self.navigationController.navigationBar.backItem.backBarButtonItem setBackgroundImage:[UIImage imageNamed:@"bg_backbtn"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    
+    UIImageView * segbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
+    segbg.frame = CGRectMake(0, 0, 320, 36);
+    [self.navigationController.navigationBar addSubview:segbg];
+    
+    _segView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 36)];
     self.tableView.tableHeaderView = _segView;
-    _segView.backgroundColor = [UIColor blueColor];
+    _segView.backgroundColor = [UIColor clearColor];
+    [_segView addSubview:segbg];
     
     _segCtrl = [[UISegmentedControl alloc] initWithItems:[[NSArray alloc] initWithObjects:@"医院", @"药店", @"药品", nil]];
-    _segCtrl.frame = CGRectMake(30, 6, 260, 32);
+    _segCtrl.frame = CGRectMake(30, 2, 260, 30);
     _segCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
+    
     [_segView addSubview:_segCtrl];
     _segCtrl.selectedSegmentIndex = 0;
     [_segCtrl addTarget:self action:@selector(changeSegment:) forControlEvents:UIControlEventValueChanged];
+    
+//    [self.tableView setFrame:CGRectMake(0, 0, 320, 480-_segView.frame.size.height-_segCtrl.frame.size.height)];
+}
+
+- (void) clickBackBtn:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
+-(void)dealloc
+{
+    [_searchbar removeFromSuperview];
+}
+
+- (void)addSearchBar
+{
+    _searchbar = [[UISearchBar alloc]initWithFrame:CGRectMake(70, 0, 250, 44)];
+    [(UIView *)[_searchbar.subviews objectAtIndex:0] removeFromSuperview];
+    
+    [self.navigationController.navigationBar addSubview:_searchbar];
+    _searchbar.delegate = self;
+    
 }
 
 -(void)setSegCtrlData:(NSInteger)idx
@@ -80,7 +126,13 @@
 -(void)changeSegment:(id)sender
 {
     int idx = _segCtrl.selectedSegmentIndex;
-    NSLog(@"%d", idx);
+//    NSLog(@"%d", idx);
+    [self setSegCtrlData:idx];
+}
+
+- (void) selectCrtSegIndex:(NSInteger)idx
+{
+    _segCtrl.selectedSegmentIndex = idx;
     [self setSegCtrlData:idx];
 }
 
@@ -121,14 +173,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    NSLog(@"aaa");
+//    NSLog(@"aaa");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"bbb %d", [_crtSelectData count]);
+//    NSLog(@"bbb %d", [_crtSelectData count]);
     return [_crtSelectData count];
 }
 
@@ -143,7 +195,7 @@
     // Configure the cell...
     NSDictionary * dict = [_crtSelectData objectAtIndex:indexPath.row];
     cell.textLabel.text = [dict objectForKey:@"name"];
-    NSLog(@"ccc %@", [dict objectForKey:@"name"]);
+//    NSLog(@"ccc %@", [dict objectForKey:@"name"]);
     return cell;
 }
 

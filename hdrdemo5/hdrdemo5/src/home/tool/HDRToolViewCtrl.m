@@ -27,6 +27,31 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIView * subv = (UIView *)[[self.navigationController.navigationBar subviews] objectAtIndex:0];
+    [subv removeFromSuperview];
+    UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
+    bg.frame = CGRectMake(0, 0, 320, 44);
+    [self.navigationController.navigationBar addSubview:bg];
+    
+
+    UIImageView * btnbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_backbtn"]];
+    btnbg.frame = CGRectMake(10, 0, 53, 44);
+    [self.navigationController.navigationBar addSubview:btnbg];
+    
+    UIButton * backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 53, 44)];
+    backBtn.backgroundColor = [UIColor clearColor];
+    [backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    
+
+}
+
+- (void) clickBackBtn:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -27,12 +27,37 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    [self.view addSubview:_mapView];
+//    _mapView.mapType = MKMapTypeStandard;
+    _mapView.mapType = MKMapTypeHybrid;
+    _mapView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MapViewDelegate
+
+- (void)mapViewDidFailLoadingMap:(MKMapView *)mapView withError:(NSError *)error
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"地图加载错误" message:@"error" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+{
+    if ([CLLocationManager locationServicesEnabled])
+    {
+//        _mapView.mapType = MKMapTypeStandard;
+//        _mapView.delegate = self;
+        _mapView.showsUserLocation = YES;
+        [_mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    }
 }
 
 /*

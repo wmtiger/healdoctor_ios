@@ -35,6 +35,7 @@
 //    HDRHomeNavCtrl * homevc = [[HDRHomeNavCtrl alloc] initWithRootViewController:[[HDRHomeRootCtrl alloc] init]];
     
     HDRHomeNavCtrl * homevc = [[HDRHomeNavCtrl alloc] init];
+//    homevc.navDelegate = self;// 不需要了
     
     HDRNearCtrl * nearvc = [[HDRNearCtrl alloc] init];
     
@@ -42,10 +43,10 @@
     
     HDRMoreCtrl * morevc = [[HDRMoreCtrl alloc] init];
     
-//    homevc.title = @"首页";
-//    nearvc.title = @"附近";
-//    uservc.title = @"用户";
-//    morevc.title = @"更多";
+    homevc.title = @"首页";
+    nearvc.title = @"附近";
+    uservc.title = @"用户";
+    morevc.title = @"更多";
     
     NSArray * ctrls = [[NSArray alloc] initWithObjects:homevc, nearvc, uservc, morevc, nil];
     self.viewControllers = ctrls;
@@ -64,12 +65,25 @@
     
     self.tabBar.backgroundImage = [UIImage imageNamed:@"bg_tabbar"];
     //    self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - HomeRootDelegate
+
+- (void) showHomeTabbar
+{
+//    [self.tabBar setHidden:NO];
+}
+
+- (void) hideHomeTabbar
+{
+//    [self.tabBar setHidden:YES];
 }
 
 /*

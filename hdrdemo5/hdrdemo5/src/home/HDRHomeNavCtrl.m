@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view.
     
     HDRHomeRootCtrl * rootvc = [[HDRHomeRootCtrl alloc] init];
+    rootvc.delegate = self;
     
     NSArray * ctrls = [[NSArray alloc] initWithObjects:rootvc, nil];
     
@@ -42,6 +43,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - HomeRootDelegate
+
+- (void) showHomeTabbar
+{
+    [_navDelegate showHomeTabbar];
+//    NSLog(@"showHomeTabbar");
+}
+
+- (void) hideHomeTabbar
+{
+    [_navDelegate hideHomeTabbar];
+//    NSLog(@"hideHomeTabbar");
 }
 
 /*

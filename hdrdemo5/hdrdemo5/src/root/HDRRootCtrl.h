@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HDRHomeNavCtrl.h"
 
-@interface HDRRootCtrl : UITabBarController
+@interface HDRRootCtrl : UITabBarController <HomeNavDelegate>
 
 @end

@@ -1,18 +1,18 @@
 //
-//  HDRExamViewCtrl.m
+//  HDRNanShenViewCtrl.m
 //  hdrdemo5
 //
-//  Created by wei sm on 14-5-22.
+//  Created by wei sm on 14-6-1.
 //  Copyright (c) 2014年 apple. All rights reserved.
 //
 
-#import "HDRExamViewCtrl.h"
+#import "HDRNanShenViewCtrl.h"
 
-@interface HDRExamViewCtrl ()
+@interface HDRNanShenViewCtrl ()
 
 @end
 
-@implementation HDRExamViewCtrl
+@implementation HDRNanShenViewCtrl
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,13 +28,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     UIView * subv = (UIView *)[[self.navigationController.navigationBar subviews] objectAtIndex:0];
     [subv removeFromSuperview];
     UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
     bg.frame = CGRectMake(0, 0, 320, 44);
     [self.navigationController.navigationBar addSubview:bg];
     
-
+    
     UIImageView * btnbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_backbtn"]];
     btnbg.frame = CGRectMake(10, 0, 53, 44);
     [self.navigationController.navigationBar addSubview:btnbg];
@@ -46,6 +47,10 @@
     self.navigationItem.leftBarButtonItem = backButtonItem;
     
 
+    
+    UIImageView * bg1 = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_nanshen"]];
+    [self.view addSubview:bg1];
+    
 }
 
 - (void) clickBackBtn:(id)sender
@@ -53,6 +58,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {

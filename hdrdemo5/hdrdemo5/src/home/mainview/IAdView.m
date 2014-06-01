@@ -26,12 +26,13 @@
 //    NSLog(@"initadview");
     NSString * picsURL = @"adholder.png";
     
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 135)];
     UIImage *image = [UIImage imageNamed:picsURL];
     [self.imageView setImage:image];
     [self addSubview:self.imageView];
     
-    self.title = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, 320, 20)];
+    self.title = [[UILabel alloc] initWithFrame:CGRectMake(0, 115, 320, 20)];
+    self.title.textColor = [UIColor whiteColor];
     self.title.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
     [self addSubview:self.title];
 }

@@ -52,6 +52,22 @@
 		A306C6CC1938CC9A0038DB43 /* HDRGlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = A306C6CB1938CC9A0038DB43 /* HDRGlobalData.m */; };
 		A306C6D01938CF800038DB43 /* drug.json in Resources */ = {isa = PBXBuildFile; fileRef = A306C6CE1938CF800038DB43 /* drug.json */; };
 		A306C6D11938CF800038DB43 /* hospital.json in Resources */ = {isa = PBXBuildFile; fileRef = A306C6CF1938CF800038DB43 /* hospital.json */; };
+		A30A2962193A13A400ABEA45 /* bg_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A30A2961193A13A400ABEA45 /* bg_navbar.png */; };
+		A30A2964193A15B900ABEA45 /* bg_sp.png in Resources */ = {isa = PBXBuildFile; fileRef = A30A2963193A15B900ABEA45 /* bg_sp.png */; };
+		A30A2966193A172200ABEA45 /* bg_baoguanglan.png in Resources */ = {isa = PBXBuildFile; fileRef = A30A2965193A172200ABEA45 /* bg_baoguanglan.png */; };
+		A30A2968193A1B0100ABEA45 /* bg_funsbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A30A2967193A1B0100ABEA45 /* bg_funsbar.png */; };
+		A3FB0F7A193AD35E00C98679 /* bg_copyrightview.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F78193AD35E00C98679 /* bg_copyrightview.png */; };
+		A3FB0F7B193AD35E00C98679 /* bg_userview.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F79193AD35E00C98679 /* bg_userview.png */; };
+		A3FB0F7D193AD99300C98679 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FB0F7C193AD99300C98679 /* MapKit.framework */; };
+		A3FB0F7F193AD99A00C98679 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FB0F7E193AD99A00C98679 /* CoreLocation.framework */; };
+		A3FB0F81193AECB300C98679 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F80193AECB300C98679 /* citydict.plist */; };
+		A3FB0F88193B230300C98679 /* HDRSelectCityTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0F87193B230300C98679 /* HDRSelectCityTableViewCtrl.m */; };
+		A3FB0F8A193B4EFD00C98679 /* bg_backbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F89193B4EFD00C98679 /* bg_backbtn.png */; };
+		A3FB0F8D193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0F8C193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m */; };
+		A3FB0F90193B654200C98679 /* HDRNanShenViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0F8F193B654200C98679 /* HDRNanShenViewCtrl.m */; };
+		A3FB0F93193B65B200C98679 /* bg_nanshen.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F91193B65B200C98679 /* bg_nanshen.png */; };
+		A3FB0F94193B65B200C98679 /* bg_nvshen.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FB0F92193B65B200C98679 /* bg_nvshen.png */; };
+		A3FB0F97193B661A00C98679 /* HDRNvShenViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB0F96193B661A00C98679 /* HDRNvShenViewCtrl.m */; };
 		A3FC1788192E3A980050263A /* HDRExamViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */; };
 		A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC178D192E3AE20050263A /* HDRToolViewCtrl.m */; };
 		A3FC1791192E3B0E0050263A /* HDRDrugViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC1790192E3B0E0050263A /* HDRDrugViewCtrl.m */; };
@@ -137,6 +153,26 @@
 		A306C6CB1938CC9A0038DB43 /* HDRGlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRGlobalData.m; path = global/HDRGlobalData.m; sourceTree = "<group>"; };
 		A306C6CE1938CF800038DB43 /* drug.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = drug.json; path = data/drug.json; sourceTree = "<group>"; };
 		A306C6CF1938CF800038DB43 /* hospital.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hospital.json; path = data/hospital.json; sourceTree = "<group>"; };
+		A30A2961193A13A400ABEA45 /* bg_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_navbar.png; sourceTree = "<group>"; };
+		A30A2963193A15B900ABEA45 /* bg_sp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_sp.png; sourceTree = "<group>"; };
+		A30A2965193A172200ABEA45 /* bg_baoguanglan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_baoguanglan.png; sourceTree = "<group>"; };
+		A30A2967193A1B0100ABEA45 /* bg_funsbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_funsbar.png; sourceTree = "<group>"; };
+		A3FB0F78193AD35E00C98679 /* bg_copyrightview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_copyrightview.png; sourceTree = "<group>"; };
+		A3FB0F79193AD35E00C98679 /* bg_userview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_userview.png; sourceTree = "<group>"; };
+		A3FB0F7C193AD99300C98679 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A3FB0F7E193AD99A00C98679 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A3FB0F80193AECB300C98679 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = citydict.plist; path = data/citydict.plist; sourceTree = "<group>"; };
+		A3FB0F86193B230300C98679 /* HDRSelectCityTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRSelectCityTableViewCtrl.h; path = selectcity/HDRSelectCityTableViewCtrl.h; sourceTree = "<group>"; };
+		A3FB0F87193B230300C98679 /* HDRSelectCityTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRSelectCityTableViewCtrl.m; path = selectcity/HDRSelectCityTableViewCtrl.m; sourceTree = "<group>"; };
+		A3FB0F89193B4EFD00C98679 /* bg_backbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_backbtn.png; sourceTree = "<group>"; };
+		A3FB0F8B193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDRSelectTypeTableViewCtrl.h; path = selectcity/HDRSelectTypeTableViewCtrl.h; sourceTree = "<group>"; };
+		A3FB0F8C193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDRSelectTypeTableViewCtrl.m; path = selectcity/HDRSelectTypeTableViewCtrl.m; sourceTree = "<group>"; };
+		A3FB0F8E193B654200C98679 /* HDRNanShenViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRNanShenViewCtrl.h; sourceTree = "<group>"; };
+		A3FB0F8F193B654200C98679 /* HDRNanShenViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRNanShenViewCtrl.m; sourceTree = "<group>"; };
+		A3FB0F91193B65B200C98679 /* bg_nanshen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_nanshen.png; sourceTree = "<group>"; };
+		A3FB0F92193B65B200C98679 /* bg_nvshen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_nvshen.png; sourceTree = "<group>"; };
+		A3FB0F95193B661A00C98679 /* HDRNvShenViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRNvShenViewCtrl.h; sourceTree = "<group>"; };
+		A3FB0F96193B661A00C98679 /* HDRNvShenViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRNvShenViewCtrl.m; sourceTree = "<group>"; };
 		A3FC1786192E3A980050263A /* HDRExamViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRExamViewCtrl.h; sourceTree = "<group>"; };
 		A3FC1787192E3A980050263A /* HDRExamViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRExamViewCtrl.m; sourceTree = "<group>"; };
 		A3FC178C192E3AE20050263A /* HDRToolViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRToolViewCtrl.h; sourceTree = "<group>"; };
@@ -150,6 +186,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FB0F7F193AD99A00C98679 /* CoreLocation.framework in Frameworks */,
+				A3FB0F7D193AD99300C98679 /* MapKit.framework in Frameworks */,
 				18640B4D1928560D00338066 /* CoreGraphics.framework in Frameworks */,
 				18640B4F1928560D00338066 /* UIKit.framework in Frameworks */,
 				18640B4B1928560D00338066 /* Foundation.framework in Frameworks */,
@@ -215,6 +253,10 @@
 				180F41161928A1BF0023287A /* HDRHomeAtentionView.m */,
 				180F411C1928A75C0023287A /* HDRHomeAtentionCell.h */,
 				180F411D1928A75C0023287A /* HDRHomeAtentionCell.m */,
+				A3FB0F8E193B654200C98679 /* HDRNanShenViewCtrl.h */,
+				A3FB0F8F193B654200C98679 /* HDRNanShenViewCtrl.m */,
+				A3FB0F95193B661A00C98679 /* HDRNvShenViewCtrl.h */,
+				A3FB0F96193B661A00C98679 /* HDRNvShenViewCtrl.m */,
 			);
 			path = mainview;
 			sourceTree = "<group>";
@@ -229,6 +271,15 @@
 		180F410B192898A30023287A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB0F91193B65B200C98679 /* bg_nanshen.png */,
+				A3FB0F92193B65B200C98679 /* bg_nvshen.png */,
+				A3FB0F89193B4EFD00C98679 /* bg_backbtn.png */,
+				A3FB0F78193AD35E00C98679 /* bg_copyrightview.png */,
+				A3FB0F79193AD35E00C98679 /* bg_userview.png */,
+				A30A2967193A1B0100ABEA45 /* bg_funsbar.png */,
+				A30A2965193A172200ABEA45 /* bg_baoguanglan.png */,
+				A30A2963193A15B900ABEA45 /* bg_sp.png */,
+				A30A2961193A13A400ABEA45 /* bg_navbar.png */,
 				A306C6BF1938C56C0038DB43 /* bg_tabbar.png */,
 				A306C6C01938C56C0038DB43 /* icon_home.png */,
 				A306C6C11938C56C0038DB43 /* icon_near.png */,
@@ -308,6 +359,8 @@
 		18640B491928560D00338066 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB0F7E193AD99A00C98679 /* CoreLocation.framework */,
+				A3FB0F7C193AD99300C98679 /* MapKit.framework */,
 				18640B4A1928560D00338066 /* Foundation.framework */,
 				18640B4C1928560D00338066 /* CoreGraphics.framework */,
 				18640B4E1928560D00338066 /* UIKit.framework */,
@@ -383,6 +436,7 @@
 		18640B9E1928577900338066 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB0F82193B223700C98679 /* selectcity */,
 				180F411F1928AFD20023287A /* drug */,
 				180F41201928AFD20023287A /* exam */,
 				180F41211928AFD20023287A /* hospital */,
@@ -444,10 +498,22 @@
 		A306C6CD1938CF760038DB43 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB0F80193AECB300C98679 /* citydict.plist */,
 				A306C6CE1938CF800038DB43 /* drug.json */,
 				A306C6CF1938CF800038DB43 /* hospital.json */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		A3FB0F82193B223700C98679 /* selectcity */ = {
+			isa = PBXGroup;
+			children = (
+				A3FB0F86193B230300C98679 /* HDRSelectCityTableViewCtrl.h */,
+				A3FB0F87193B230300C98679 /* HDRSelectCityTableViewCtrl.m */,
+				A3FB0F8B193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.h */,
+				A3FB0F8C193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m */,
+			);
+			name = selectcity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,19 +594,29 @@
 			files = (
 				18640B551928560D00338066 /* InfoPlist.strings in Resources */,
 				A306C6C71938C56C0038DB43 /* icon_setting.png in Resources */,
+				A30A2962193A13A400ABEA45 /* bg_navbar.png in Resources */,
 				A306C6C81938C56C0038DB43 /* icon_user.png in Resources */,
+				A3FB0F8A193B4EFD00C98679 /* bg_backbtn.png in Resources */,
+				A30A2966193A172200ABEA45 /* bg_baoguanglan.png in Resources */,
+				A3FB0F81193AECB300C98679 /* citydict.plist in Resources */,
 				A306C6D01938CF800038DB43 /* drug.json in Resources */,
 				18640B5D1928560D00338066 /* Images.xcassets in Resources */,
 				180F40C5192864980023287A /* Default@2x.png in Resources */,
 				180F40C3192864980023287A /* Default-568h@2x.png in Resources */,
+				A3FB0F94193B65B200C98679 /* bg_nvshen.png in Resources */,
 				180F410E192898A30023287A /* adholder.png in Resources */,
+				A3FB0F93193B65B200C98679 /* bg_nanshen.png in Resources */,
 				A306C6D11938CF800038DB43 /* hospital.json in Resources */,
 				180F411B1928A6220023287A /* green.png in Resources */,
 				180F411A1928A6220023287A /* blue.png in Resources */,
 				A306C6C61938C56C0038DB43 /* icon_near.png in Resources */,
 				A306C6C51938C56C0038DB43 /* icon_home.png in Resources */,
+				A30A2968193A1B0100ABEA45 /* bg_funsbar.png in Resources */,
+				A30A2964193A15B900ABEA45 /* bg_sp.png in Resources */,
 				180F40C4192864980023287A /* Default.png in Resources */,
 				A306C6C41938C56C0038DB43 /* bg_tabbar.png in Resources */,
+				A3FB0F7A193AD35E00C98679 /* bg_copyrightview.png in Resources */,
+				A3FB0F7B193AD35E00C98679 /* bg_userview.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +638,7 @@
 				1826322D193194950056141D /* HDRHospitalHeadBar.m in Sources */,
 				18640BA81928580A00338066 /* HDRHomeNavCtrl.m in Sources */,
 				A3FC1788192E3A980050263A /* HDRExamViewCtrl.m in Sources */,
+				A3FB0F8D193B5F6500C98679 /* HDRSelectTypeTableViewCtrl.m in Sources */,
 				180F411419289E860023287A /* IAdView.m in Sources */,
 				180F40CC192868500023287A /* HDRHomeHeadSearchBar.m in Sources */,
 				A3FC178E192E3AE20050263A /* HDRToolViewCtrl.m in Sources */,
@@ -574,13 +651,16 @@
 				180F41171928A1BF0023287A /* HDRHomeAtentionView.m in Sources */,
 				180F40DB19288F250023287A /* HDRHomeAdsView.m in Sources */,
 				180F40C9192866AA0023287A /* HDRHomeHeadSearchCtrl.m in Sources */,
+				A3FB0F90193B654200C98679 /* HDRNanShenViewCtrl.m in Sources */,
 				18640BAB1928585000338066 /* HDRHomeRootCtrl.m in Sources */,
 				18640BB419285DDC00338066 /* HDRMoreCtrl.m in Sources */,
 				180F40CF19286D630023287A /* HDRHomeNewsBar.m in Sources */,
 				A306C6CC1938CC9A0038DB43 /* HDRGlobalData.m in Sources */,
 				180F411319289E860023287A /* IAdObj.m in Sources */,
+				A3FB0F88193B230300C98679 /* HDRSelectCityTableViewCtrl.m in Sources */,
 				180F411E1928A75C0023287A /* HDRHomeAtentionCell.m in Sources */,
 				A3FC1791192E3B0E0050263A /* HDRDrugViewCtrl.m in Sources */,
+				A3FB0F97193B661A00C98679 /* HDRNvShenViewCtrl.m in Sources */,
 				180F40D719288EF80023287A /* CycleScrollView.m in Sources */,
 				18640BA51928578E00338066 /* HDRRootCtrl.m in Sources */,
 				180F40D219286EAB0023287A /* HDRHomeFunsBar.m in Sources */,

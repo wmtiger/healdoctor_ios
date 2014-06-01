@@ -1,18 +1,18 @@
 //
-//  HDRExamViewCtrl.m
+//  HDRNvShenViewCtrl.m
 //  hdrdemo5
 //
-//  Created by wei sm on 14-5-22.
+//  Created by wei sm on 14-6-1.
 //  Copyright (c) 2014年 apple. All rights reserved.
 //
 
-#import "HDRExamViewCtrl.h"
+#import "HDRNvShenViewCtrl.h"
 
-@interface HDRExamViewCtrl ()
+@interface HDRNvShenViewCtrl ()
 
 @end
 
-@implementation HDRExamViewCtrl
+@implementation HDRNvShenViewCtrl
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +34,7 @@
     bg.frame = CGRectMake(0, 0, 320, 44);
     [self.navigationController.navigationBar addSubview:bg];
     
-
+    
     UIImageView * btnbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_backbtn"]];
     btnbg.frame = CGRectMake(10, 0, 53, 44);
     [self.navigationController.navigationBar addSubview:btnbg];
@@ -45,6 +45,8 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backButtonItem;
     
+    UIImageView * bg1 = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_nvshen"]];
+    [self.view addSubview:bg1];
 
 }
 
@@ -53,6 +55,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {

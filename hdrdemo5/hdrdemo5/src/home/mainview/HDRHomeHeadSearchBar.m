@@ -17,54 +17,116 @@
     if (self) {
         // Initialization code
         
-        UIButton * cityBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        cityBtn.frame = CGRectMake(0, 0, 50, 44);
-        [cityBtn setTitle:@"杭州" forState:UIControlStateNormal];
-        [cityBtn setTitle:@"杭州" forState:UIControlStateHighlighted];
-//        cityBtn.titleLabel.text = @"杭州";
-        [cityBtn addTarget:self action:@selector(clickCity:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:cityBtn];
+        UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_navbar"]];
+        bg.frame = CGRectMake(0, 0, 320, 60);
+        [self addSubview:bg];
         
-        UIButton * typeBtn =  [UIButton buttonWithType:UIButtonTypeSystem];
-        typeBtn.frame = CGRectMake(50, 0, 50, 44);
-        [typeBtn setTitle:@"医院" forState:UIControlStateNormal];
-        [typeBtn setTitle:@"医院" forState:UIControlStateHighlighted];
-//        typeBtn.titleLabel.text = @"医院";
-        [typeBtn addTarget:self action:@selector(clickType:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:typeBtn];
+        _cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _cityBtn.frame = CGRectMake(0, 0, 50, 60);
+        _cityBtn.backgroundColor = [UIColor clearColor];
+        [self setCityBtnName:@"杭州"];
         
-        self.searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(100, 0, 220, 44)];
+        [_cityBtn addTarget:self action:@selector(clickCity:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_cityBtn];
+        
+        UIImageView * spbg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_sp"]];
+        [self addSubview:spbg];
+        [spbg setFrame:CGRectMake(51, 20, spbg.frame.size.width, 20)];
+        
+        _typeBtn =  [UIButton buttonWithType:UIButtonTypeCustom];
+        _typeBtn.frame = CGRectMake(54, 0, 50, 60);
+        [self setTypeIsHospital];
+        
+        [_typeBtn addTarget:self action:@selector(clickType:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_typeBtn];
+        
+        self.searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(100, 0, 220, 60)];
         self.searchbar.keyboardType = UIKeyboardTypeDefault;
-//        self.searchbar.showsCancelButton = YES;
-        self.searchbar.delegate = self;
+//        self.searchbar.delegate = self;
+        [(UIView *)[self.searchbar.subviews objectAtIndex:0] removeFromSuperview];
         [self addSubview:self.searchbar];
         
+        _searchbar.placeholder = @"点此搜索";
+        
+        UIButton * searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        searchBtn.frame = CGRectMake(100, 0, 220, 60);
+        searchBtn.backgroundColor = [UIColor clearColor];
+//        [self setCityBtnName:@"杭州"];
+        [searchBtn addTarget:self action:@selector(clickSearchBar:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:searchBtn];
     }
     return self;
 }
 
+- (void)setCityBtnName:(NSString *)cityName
+{
+    [_cityBtn setTitle:cityName forState:UIControlStateNormal];
+}
+
+- (void)setTypeBtnName:(NSString *)typeName
+{
+    [_typeBtn setTitle:typeName forState:UIControlStateNormal];
+}
+
+- (void)setTypeIsHospital
+{
+    [self setTypeBtnName:@"医院"];
+}
+
+- (void)setTypeIsDrug
+{
+    [self setTypeBtnName:@"药品"];
+}
+
+- (void)setTypeIsDrugStore
+{
+    [self setTypeBtnName:@"药店"];
+}
+
 - (void)clickCity:(id)sender
 {
-    NSLog(@"click city");
+//    NSLog(@"click city");
+    [_delegate showSelectCityView];
 }
 
 - (void)clickType:(id)sender
 {
-    NSLog(@"click type");
+//    NSLog(@"click type");
+    [_delegate showSelectTypeView];
 }
+
+- (void)clickSearchBar:(id)sender
+{
+    NSLog(@"clickSearchBar");
+    NSLog(@"_typeBtn.titleLabel.text:%@", _typeBtn.titleLabel.text);
+//    NSLog(@"%c", [_typeBtn.titleLabel.text isEqualToString:@"医院"]);
+    if ([_typeBtn.titleLabel.text isEqualToString:@"医院"]) {
+        [_delegate toShowHospital];
+    }
+    else if ([_typeBtn.titleLabel.text isEqualToString:@"药品"])
+    {
+        [_delegate toShowDrug];
+    }
+    else if ([_typeBtn.titleLabel.text isEqualToString:@"药店"])
+    {
+        [_delegate toShowDrugStore];
+    }
+}
+
 
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;
 {
-    [HDRGlobalData instance];
-    [self.searchbar setShowsCancelButton:YES animated:YES];
+    
+//    [HDRGlobalData instance];
+//    [self.searchbar setShowsCancelButton:YES animated:YES];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {
-    [self.searchbar resignFirstResponder];
-    [self.searchbar setShowsCancelButton:NO animated:YES];
+//    [self.searchbar resignFirstResponder];
+//    [self.searchbar setShowsCancelButton:NO animated:YES];
 }
 
 

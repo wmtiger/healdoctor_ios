@@ -48,12 +48,12 @@
     
     NSLog(@"iadlist%d", [iadList count]);
     for (int i = 0; i < [iadList count]; i++) {
-        IAdView * adv = [[IAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
+        IAdView * adv = [[IAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 135)];
         [viewList addObject:adv];
         [adv setIAdObj: iadList[i]];
     };
     
-    self.cycleScrollView = [[CycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 150) animationDuration:2];
+    self.cycleScrollView = [[CycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 135) animationDuration:2];
     self.cycleScrollView.fetchContentViewAtIndex = ^UIView *(NSInteger pageIndex){
         return viewList[pageIndex];
     };

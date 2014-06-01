@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HDRHomeRootCtrl.h"
 
-@interface HDRHomeNavCtrl : UINavigationController
+@protocol HomeNavDelegate <NSObject>
+
+@optional
+
+- (void) showHomeTabbar;
+
+- (void) hideHomeTabbar;
+
+@end
+
+@interface HDRHomeNavCtrl : UINavigationController <HomeRootDelegate>
+
+@property (nonatomic, strong) id<HomeNavDelegate> navDelegate;
 
 @end

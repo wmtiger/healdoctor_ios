@@ -19,4 +19,10 @@
 
 @property (nonatomic, strong) NSMutableArray * searchResultData;// 被查询后的数据源
 
+-(void)setSegCtrlData:(NSInteger)idx;
+
+- (void)addSearchBar;// 把搜索栏加到顶部
+
+- (void) selectCrtSegIndex:(NSInteger)idx;
+
 @end

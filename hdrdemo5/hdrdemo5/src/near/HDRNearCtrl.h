@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface HDRNearCtrl : UIViewController
+@interface HDRNearCtrl : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+
+@property (nonatomic, strong) MKMapView * mapView;
+
+//@property (nonatomic, weak) 
 
 @end

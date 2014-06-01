@@ -37,17 +37,27 @@ static HDRGlobalData * globalData = nil;
     [self initDrugData];
     [self initDrugStoreData];
     [self initHospitalData];
+    [self initCityData];
+}
+
+- (void)initCityData
+{
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"citydict" ofType:@"plist"];
+    _cityDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSArray * arr = [[_cityDict allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    
+    _cityKeys = [[NSMutableArray alloc]initWithArray:arr];
+//    NSString * lastKey = [_cityKeys lastObject];
+//    [_cityKeys removeLastObject];
+//    [_cityKeys insertObject:lastKey atIndex:0];
 }
 
 - (void)initDrugData
 {
     NSString * path = [[NSBundle mainBundle] pathForResource:@"drug" ofType:@"json"];
-    NSLog(@"%@", path);
     NSData * data = [NSData dataWithContentsOfFile:path];
     _drugData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-//    NSDictionary * dict = [_drugData objectAtIndex:0];
-//    NSLog(@"%@", [dict objectForKey:@"name"] );
-    NSLog(@"drugdata len: %d", [_drugData count]);
+    
 }
 
 - (void)initDrugStoreData
@@ -58,12 +68,9 @@ static HDRGlobalData * globalData = nil;
 - (void)initHospitalData
 {
     NSString * path = [[NSBundle mainBundle] pathForResource:@"hospital" ofType:@"json"];
-    NSLog(@"%@", path);
     NSData * data = [NSData dataWithContentsOfFile:path];
     _hospitalData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-//    NSDictionary * dict = [_hospitalData objectAtIndex:0];
-//    NSLog(@"%@", [dict objectForKey:@"name"] );
-    NSLog(@"_hospitalData len: %d", [_hospitalData count]);
+    
 }
 
 @end

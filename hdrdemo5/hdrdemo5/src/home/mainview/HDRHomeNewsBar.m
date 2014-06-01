@@ -16,13 +16,22 @@
     if (self) {
         // Initialization code
         
-        self.newsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-        self.newsLabel.backgroundColor = [UIColor redColor];
-        [self addSubview:self.newsLabel];
-        self.newsLabel.text = @"  这里是新闻";
+        UIImageView * bg = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"bg_baoguanglan"]];
+        [self addSubview:bg];
         
+        self.newsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, bg.frame.size.height)];
+        self.newsLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.newsLabel];
+//        self.newsLabel.text = @"   曝光栏：";
+        [self setNewsText:@"某某药有致癌物质"];
     }
     return self;
+}
+
+- (void)setNewsText:(NSString *)txt
+{
+    self.newsLabel.text = [NSString stringWithFormat:@"   曝光栏：%@", txt];
+    
 }
 
 /*
