@@ -57,7 +57,14 @@
 //        _mapView.delegate = self;
         _mapView.showsUserLocation = YES;
         [_mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+        
+        
     }
+}
+
+- (void) showPositionWithLat:(CGFloat)lat long:(CGFloat)lon
+{
+    
 }
 
 /*

@@ -28,7 +28,12 @@ package
 				{
 					continue;
 				}
-				ret += convertChar(chinese.charAt(i));
+				var temp:String = convertChar(chinese.charAt(i));
+				if(temp == "0")
+				{
+					temp = PYConvert2.convertChar2(chinese.charAt(i));
+				}
+				ret += temp;
 			}
 			return ret;
 		}

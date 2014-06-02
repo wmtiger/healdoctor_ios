@@ -54,7 +54,7 @@ static HDRGlobalData * globalData = nil;
 
 - (void)initDrugData
 {
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"drug" ofType:@"json"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"drug2" ofType:@"json"];
     NSData * data = [NSData dataWithContentsOfFile:path];
     _drugData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     
@@ -67,7 +67,7 @@ static HDRGlobalData * globalData = nil;
 
 - (void)initHospitalData
 {
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"hospital" ofType:@"json"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"hospital2" ofType:@"json"];
     NSData * data = [NSData dataWithContentsOfFile:path];
     _hospitalData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     

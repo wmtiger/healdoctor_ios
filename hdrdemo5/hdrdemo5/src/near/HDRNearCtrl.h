@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) MKMapView * mapView;
 
-//@property (nonatomic, weak) 
+//@property (nonatomic, weak)
+
+- (void) showPositionWithLat:(CGFloat)lat long:(CGFloat)lon;
 
 @end

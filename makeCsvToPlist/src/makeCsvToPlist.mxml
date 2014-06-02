@@ -181,9 +181,22 @@
 						continue;
 					}
 					var name:String = obj.name;
-					var py:String = PYConvert2.convertString(name);
+					var py:String = "";
+					py = PYConvert.convertString(name);
+//					py = PYConvert2.convertString(name);
 					obj.py = py;
+					obj.lat = 40.17 + int(Math.random() * 2 * 1000)/1000 - 1;
+					obj.long = 116.39 + int(Math.random() * 2 * 1000)/1000 - 1;
+					if(obj.level.indexOf("甲") >= 0)
+					{
+						obj.level2 = "1";
+					}
+					else
+					{
+						obj.level2 = "0";
+					}
 				}
+				
 				var str:String = JSON.stringify(arr);
 				
 				var fn:String = "hospital2.json";
@@ -244,7 +257,69 @@
 			
 			protected function outputJSON_clickHandler(event:MouseEvent):void
 			{
+				var txtFilter:FileFilter = new FileFilter("Text", "*.json");
+				var fileToOpen:File = new File();
 				
+				try 
+				{
+					fileToOpen.browseForOpen("选择json", [txtFilter]);
+					fileToOpen.addEventListener(Event.SELECT, fileSelected);
+				}
+				catch (error:Error)
+				{
+					trace("Failed:", error.message);
+				}
+				
+				function fileSelected(event:Event):void 
+				{
+					var stream:FileStream = new FileStream();
+					stream.openAsync(event.target as File, FileMode.READ);
+					stream.addEventListener(Event.COMPLETE, onOpenJsonStream1);
+					
+				}
+				
+				function onOpenJsonStream1(event:Event):void
+				{
+					// TODO Auto-generated method stub
+					var stream:FileStream = event.target as FileStream;
+					stream.removeEventListener(Event.COMPLETE, onOpenJsonStream1);
+					var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
+					var arr:Array = JSON.parse(fileData) as Array;
+					var len:int = arr.length;
+					for(var i:int = 0; i < len; i++)
+					{
+						var obj:Object = arr[i];
+						if(obj.name == "")
+						{
+							arr.splice(i, 1);
+							continue;
+						}
+						var name:String = obj.name;
+						var py:String = "";
+						py = PYConvert.convertString(name);
+						obj.py = py;
+//						obj.lat = 40.17 + int(Math.random() * 2 * 1000)/1000 - 1;
+//						obj.long = 116.39 + int(Math.random() * 2 * 1000)/1000 - 1;
+					}
+					
+					var str:String = JSON.stringify(arr);
+					
+					var fn:String = "drug2.json";
+					
+					var file:File = File.desktopDirectory.resolvePath(fn);
+					var fs:FileStream = new FileStream();
+					try
+					{
+						fs.open(file, FileMode.WRITE);
+						fs.writeUTFBytes(str);
+					}
+					catch(e:Error)
+					{
+						
+					}
+					fs.close();
+					Alert.show("导出 "+fn+" 完成","提示");
+				}
 			}
 			
 		]]>

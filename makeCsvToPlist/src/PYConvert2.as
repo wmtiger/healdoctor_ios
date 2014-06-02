@@ -46,7 +46,7 @@ package
 			return null;
 		}
 		
-		private static function convertChar2(char:String):String
+		public static function convertChar2(char:String):String
 		{
 			var arr:Array = getPyArr();
 			var list:Array = [];

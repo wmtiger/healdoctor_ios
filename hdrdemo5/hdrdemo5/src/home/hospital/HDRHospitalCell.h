@@ -14,8 +14,10 @@
 @property (nonatomic, strong) UILabel * descLabel;
 @property (nonatomic, strong) UIImageView * levelImg;
 @property (nonatomic, strong) UIImageView * yibaoImg;
+@property (nonatomic, strong) UIImageView * goodImg;
 @property (nonatomic, strong) UIButton * positionBtn;
 @property (nonatomic, strong) UIButton * navToBtn;
+@property (nonatomic, strong) NSDictionary * data;
 
 + (HDRHospitalCell *) cellWithTabelView:(UITableView *)tableView withData:(NSDictionary *)data;
 
